@@ -1,41 +1,41 @@
 @font-face {
     font-family: "DancingSript";
-    src: url("../../public/fonts/DancingScript-Bold.ttf");
+    src: url("/public/fonts/DancingScript-Bold.ttf");
   }
 
   @font-face {
     font-family: "CarterOne";
-    src: url("../../public/fonts/CarterOne-Regular.ttf");
+    src: url("/public/fonts/CarterOne-Regular.ttf");
   }
   
   @font-face {
     font-family: "GreatVibes";
-    src: url("../../public/fonts/GreatVibes-Regular.ttf");
+    src: url("/public/fonts/GreatVibes-Regular.ttf");
   }
   
   @font-face {
     font-family: "KaushanScript";
-    src: url("../../public/fonts/KaushanScript-Regular.ttf");
+    src: url("/public/fonts/KaushanScript-Regular.ttf");
   }
   
   @font-face {
     font-family: "LeckerLione";
-    src: url("../../public/fonts/LeckerliOne-Regular.ttf");
+    src: url("/public/fonts/LeckerliOne-Regular.ttf");
   }
   
   @font-face {
     font-family: "Lobster";
-    src: url("../../public/fonts/Lobster-Regular.ttf");
+    src: url("/public/fonts/Lobster-Regular.ttf");
   }
   
   @font-face {
     font-family: "Pacifico";
-    src: url("../../public/fonts/Pacifico-Regular.ttf");
+    src: url("/public/fonts/Pacifico-Regular.ttf");
   }
   
   @font-face {
     font-family: "RubikViny1";
-    src: url("../../public/fonts/RubikVinyl-Regular.ttf");
+    src: url("/public/fonts/RubikVinyl-Regular.ttf");
   }
   
 
@@ -55,6 +55,7 @@ body {
 }
 
 nav{
+    backdrop-filter: blur(14px);
     background: linear-gradient(rgba(0, 0, 0, 0.635),rgba(0, 0, 0, 0.875));
     width: 100%;
     height: 53.4px;
@@ -63,6 +64,7 @@ nav{
     margin: 0px;
     padding: 0px;
     position: fixed;
+    z-index: 2;
 }
 
 .contnav{
@@ -80,9 +82,14 @@ nav{
 .bgnav{
     width: 100px;
     height: 30px;
-    background: url("../../public/images/logo-esmart2.png");
-    background-size: 100px;
-    background-repeat: no-repeat;
+    // background: url("/public/images/logo-esmart2.png");
+    // background-size: 100px;
+    // background-repeat: no-repeat;
+}
+
+.logo2{
+    width: auto;
+    height: 24px;
 }
 
 .parnav{
@@ -251,8 +258,13 @@ margin-top: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
 
+}
+
+.logoh2{
+    width: auto;
+    height: 150px
 }
 
 .ombre1{
@@ -260,6 +272,21 @@ margin-top: 50px;
 }
 
 .ombre2{
+}
+
+.ombrelogo{
+    margin-bottom: 80px;
+    backdrop-filter: blur(4px);
+    clip-path: circle(50% at 50% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.736) 5%, rgba(107, 107, 107, 0.294), rgba(169, 169, 169, 0), rgba(0, 0, 0, 0));
+}
+
+.contlogohome{
 }
 
 .imghome1{
@@ -366,11 +393,136 @@ margin-top: 50px;
     left: 56px;
 }
 
-.recmar{
-    background: linear-gradient(90deg, rgb(255, 0, 217) 0%, rgba(125,0,241,1) 35%, rgba(0,212,255,1) 100%);
+.rangemarques{
+    margin: 90px 0px;
+}
+
+.decomark{
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+
+}
+
+.recmarsam{
+    background: url(../../public/images/Samsung-Logo-Vector-scaled.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px;
+    width: 380px;
+    border-radius: 25px;
+}
+
+.recmarapp{
+    background: white;
+    background: url(../../public/images/applelogopng.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: #FFFFFF solid 4px;
     border-radius: 25px;
     height: 220px;
     width: 380px;
-    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+
+.recmarhua{
+    background: url(../../public/images/téléchargement.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+}
+
+.recmarxia{
+    background: url(../../public/images/Xiaomi_logo_2021.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+}
+
+.recmarhon{
+    background: url(../../public/images/Honor-Symbole.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+}
+
+.recmaropp{
+    background: url(../../public/images/oppo-logo-0.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+}
+
+.recmarson{
+    background: url(../../public/images/Sony_Mobile-Logo.wine.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+}
+
+.recmargoo{
+    background: url(../../public/images/logo-de-l-icône-google-plat-rempli-vectoriels-simples-pictogramme-noir-solide-isolé-sur-fond-blanc-159029192.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+}
+
+.recmaraut{
+    color: black;
+    background: white;
+    border: #FFFFFF solid 4px;
+    border-radius: 25px;
+    height: 220px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: "LeckerLione";
+}
+
+.ombreint{
+    width: 100%;
+    height: 100%;
+}
+
+.ombreinta{
+}
+
+.marque1-1:hover .ombreinta{
+    display: inline;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.marque1-1:hover .decomark{
+    display: inline;
+}
+
+.marksam{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
 }
