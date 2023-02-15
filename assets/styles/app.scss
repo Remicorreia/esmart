@@ -434,19 +434,6 @@ footer{
     justify-items: center;
 }
 
-.recmaraut{
-    color: black;
-    background: white;
-    border: #FFFFFF solid 4px;
-    border-radius: 25px;
-    height: 220px;
-    width: 380px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-family: "LeckerLione";
-}
-
 .ombreint{
     width: 100%;
     height: 100%;
@@ -456,6 +443,7 @@ footer{
 }
 
 #carousel {
+    caret-color: transparent;
     grid-row: 1 / 2;
     grid-column: 1 / 12;
     width: 1200px;
@@ -473,6 +461,11 @@ footer{
   }
   
   div.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    caret-color: transparent;
     position: absolute;
     width: 300px;
     height: 400px;
@@ -486,7 +479,6 @@ footer{
   
   div.item:nth-of-type(1) {
     --offset: 1;
-    background-image: url(/public/images/256_144_2.avif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -494,9 +486,15 @@ footer{
     width: 380px;
     border-radius: 25px;
   }
+
+  .imglogosam{
+    width: auto;
+    height: 35px;
+  }
+
   div.item:nth-of-type(2) {
     --offset: 2;
-    background-image: url(/public/images/applelogopng.png);
+    background-color: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -504,9 +502,15 @@ footer{
     width: 380px;
     border-radius: 25px;
   }
+
+  .imglogoapp{
+    width: auto;
+    height: 70px;
+  }
+
+
   div.item:nth-of-type(3) {
     --offset: 3;
-    background-image: url(/public/images/Emblème-Huawei.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -514,9 +518,14 @@ footer{
     width: 380px;
     border-radius: 25px;
   }
+
+  .imglogohua{
+    width: auto;
+    height: 60px;
+  }
+
   div.item:nth-of-type(4) {
     --offset: 4;
-    background-image: url(/public/images/Xiaomi_logo_2021.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -524,42 +533,59 @@ footer{
     width: 380px;
     border-radius: 25px;
   }
+
+  .imglogoxia{
+    width: auto;
+    height: 65px;
+  }
+
   div.item:nth-of-type(5) {
     --offset: 5;
-    background-image: url(/public/images/Honor-Symbole.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 220px;
     width: 380px;
     border-radius: 25px;
+  }
+
+  .imglogohon{
+    width: auto;
+    height: 115px;
   }
 
   div.item:nth-of-type(6) {
     --offset: 6;
-    background-image: url(/public/images/OnePlus-Logo.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 220px;
     width: 380px;
     border-radius: 25px;
+  }
+
+  .imglogoopp{
+    width: auto;
+    height: 300px;
   }
 
   div.item:nth-of-type(7) {
     --offset: 7;
-    background-image: url(/public/images/Sony_Mobile-Logo.wine.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 220px;
     width: 380px;
     border-radius: 25px;
+  }
+
+  .imglogoson{
+    width: auto;
+    height: 170px;
   }
 
   div.item:nth-of-type(8) {
     --offset: 8;
-    background-image: url(/public/images/logo-de-l-icône-google-plat-rempli-vectoriels-simples-pictogramme-noir-solide-isolé-sur-fond-blanc-159029192.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -568,15 +594,28 @@ footer{
     border-radius: 25px;
   }
 
+  .imglogogoo{
+    width: auto;
+    height: 85px;
+  }
+
   div.item:nth-of-type(9) {
+    background: linear-gradient(90deg, rgb(255, 0, 217) 0%, rgb(125, 0, 241) 35%, rgb(0, 212, 255) 100%);
+    font-size: 70px;
     --offset: 9;
-    background: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 220px;
     width: 380px;
     border-radius: 25px;
+    font-family: "LeckerLione";
+    color: rgb(255, 255, 255);
+  }
+
+  .imglogoaut{
+    width: auto;
+    height: 35px;
   }
   
   input:nth-of-type(1) {
