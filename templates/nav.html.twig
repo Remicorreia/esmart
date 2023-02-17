@@ -1,31 +1,55 @@
 <nav>
 <div class="contnav">
         <div class="parnav">
-            <a href="{{ path('app_home') }}" class="homebt1">
-            <div class="bgnav">
-        <img class="logo2" src="images/logo-esmart2.png" alt=""></div>
-            </a>
+            <div class="cennav">
+                <a href="{{ path('app_home') }}" class="homebt1">
+                    <div class="bgnav">
+                        <img class="logo2" src="images/logo-esmart2.png" alt="">
+                    </div>
+                </a>
+            </div>
 
             <div class="navig">
                 <ul class="navig2">
-                <a href=""class="homebt2"><li class="li1">Smartphones</li></a>
-                <a href=""class="homebt2"><li class="li1">Marques</li></a>
-                <a href=""class="homebt2"><li class="li1">Nouveautés</li></a>
-                <a href=""class="homebt2"><li class="li1">Meilleurs Ventes</li></a>
+            <li class="li1"><a href=""class="homebt2">SmartPhones</a>
+            </li>
+                <div class="parmarque">
+                    <li class="li1"><a href=""class="homebt2">Marques</a>
+                    </li>
+                    <ul class="ulmarque">
+                            <li class="limarque"><a href="amarque">Samsung</a></li>
+                            <li class="limarque"><a href="amarque">Apple</a></li>
+                            <li class="limarque"><a href="amarque">Huawei</a></li>
+                            <li class="limarque"><a href="amarque">Xiaomi</a></li>
+                            <li class="limarque"><a href="amarque">Honor</a></li>
+                            <li class="limarque"><a href="amarque">Oppo</a></li>
+                            <li class="limarque"><a href="amarque">Sony</a></li>
+                            <li class="limarque"><a href="amarque">Google</a></li>
+                            <li class="limarque"><a href="amarque">Autres</a></li>
+                        </ul>
+                </div>
+                <li class="li1"><a href=""class="homebt2">Nouveautées</a>
+                </li>
+                    <li class="li1"><a href=""class="homebt2">Meilleurs Ventes</a>
+                    </li>
                 </ul>
             </div>
-            <div class="search">
-                <form>
-                    <input class="reche1" type="search" name="q" placeholder="Recherche">
-                    <input class="reche2" type="submit" value="X">
-                </form>
-                
+            <div class="cennav">
+                <div class="search">
+                    <form>
+                        <input class="reche1" type="search" name="q" placeholder="Recherche">
+                        <input class="reche2" type="submit" value="X">
+                    </form>
+                    
+                </div>
             </div>
-            <div class="nav3">
-                <ul class="ul2">
-                <li class="panier">Panier</li>
-                <a href="{{ path('app_login') }}"><li class="conn">Connexion</li></a>
-                </ul>
+            <div class="cennav">
+                <div class="nav3">
+                    <ul class="ul2">
+                    <li class="panier">Panier</li>
+                    <a href="{{ path('app_login') }}"><li class="conn">Connexion</li></a>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
