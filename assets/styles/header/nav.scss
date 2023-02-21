@@ -26,21 +26,13 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  // height: 53.4px;
   width: 1440px;
-}
-
-.bgnav {
-  width: 100px;
-  height: 30px;
-  // background: url("/public/images/logo-esmart2.png");
-  // background-size: 100px;
-  // background-repeat: no-repeat;
 }
 
 .logo2 {
   width: auto;
   height: 24px;
+  text-align: center;
 }
 
 .homebt1 {
@@ -49,7 +41,10 @@ nav {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  height: 23.99px;
+  user-select: none;
 }
+
 .homebt2 {
   display: flex;
   flex-direction: row;
@@ -64,7 +59,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .navig2 {
@@ -72,7 +67,7 @@ nav {
   align-items: flex-start;
   flex-direction: row;
   padding: 0px;
-  margin-top: 16px;
+  margin: 18px 0px;
 }
 
 .ul1 {
@@ -163,6 +158,9 @@ a {
   cursor: pointer;
   flex-direction: row;
   justify-content: center;
+}
+
+.parulmarque{
 }
 
 .ulmarque {
