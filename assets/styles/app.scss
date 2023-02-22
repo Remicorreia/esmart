@@ -4,6 +4,7 @@
 @import"./main/testcrou.scss";
 @import"./main/home.scss";
 @import"./main/smartphone.scss";
+// @import"./main/carousel1.scss";
 
 body {
   display: grid;
@@ -22,10 +23,10 @@ body {
 }
 
 .container{
-  margin: auto;
   width: 1440px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin:  125px auto;
 }
