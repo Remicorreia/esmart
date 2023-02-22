@@ -103,8 +103,18 @@
     width: 380px;
     border-radius: 25px;
     border: black solid 6px;
-    margin: 15px;
     transition: box-shadow 1s ease-in-out;
+  }
+
+  .alogoh{
+    margin: 15px;
+  }
+
+  .plogoh{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    font-size: 20px;
   }
 
   .item:hover{
@@ -129,12 +139,15 @@
     font-family: "LeckerLione";
     color: rgb(255, 255, 255);
     text-align: center;
-    margin: 15px;
     transition: box-shadow 1s ease-in-out;
   }
 
   .item9:hover{
     box-shadow: rgb(255, 255, 255) 0px 0px 70px -10px;
+  }
+
+  .alogoh:hover .plogoh{
+    color: rgb(255, 255, 255);
   }
 
   
