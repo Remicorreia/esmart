@@ -12,8 +12,8 @@ class SmartphoneType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom')
             ->add('photo')
+            ->add('nom')
             ->add('description')
             ->add('prix')
         ;

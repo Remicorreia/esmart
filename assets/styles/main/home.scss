@@ -20,7 +20,7 @@
   }
   
   .hr1 {
-    width: 1440px;
+    width: 1440px !important;
   }
   
   .titrehome {
@@ -205,13 +205,13 @@
   }
 
   .carrou{
-    height: auto;
+    height: auto !important;
   }
 
   #carousel{
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
   }

@@ -1,3 +1,5 @@
+
+@import "~bootstrap/scss/bootstrap";
 @import "fonts.scss";
 @import "./header/nav.scss";
 @import "./footer/footer.scss";
@@ -7,26 +9,26 @@
 // @import"./main/carousel1.scss";
 
 body {
-  display: grid;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: rgb(43, 43, 43);
-  color: rgb(255, 255, 255);
-  padding: 0px;
-  margin: 0px;
-  font-family: Phantomsans, sans-serif;
-  min-height: 600px;
-  height: auto;
-  width: 100%;
+  display: grid !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-color: rgb(43, 43, 43) !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-family: Phantomsans, sans-serif !important;
+  min-height: 600px !important;
+  height: auto !important;
+  width: 100% !important;
 }
 
-.container{
-  width: 1440px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin:  125px auto;
+.custom-container{
+  width: 1440px !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin:  125px auto !important;
 }

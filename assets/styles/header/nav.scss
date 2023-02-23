@@ -84,7 +84,7 @@ nav {
   margin: 0px;
 }
 
-a {
+a, a:hover {
   list-style: none;
   text-decoration: none;
   color: white;
@@ -99,28 +99,28 @@ a {
 }
 
 .search {
-  border: white solid 2px;
-  border-radius: 25px;
-  padding: 3px 6px;
-  outline: unset;
+  border: white solid 2px !important;
+  border-radius: 25px !important;
+  padding: 3px 6px !important;
+  outline: unset !important;
 }
 
 .reche1 {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  box-sizing: unset;
-  border-color: unset;
-  border-style: unset;
-  outline: unset;
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: white !important;
+  box-sizing: unset !important;
+  border-color: unset !important;
+  border-style: unset !important;
+  outline: unset !important;
 }
 
 .reche2 {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  outline: unset;
-  box-sizing: unset;
-  border-color: unset;
-  border-style: unset;
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: white !important;
+  outline: unset !important;
+  box-sizing: unset !important;
+  border-color: unset !important;
+  border-style: unset !important;
 }
 
 .nav3 {

@@ -2,12 +2,12 @@
 
 {{ form_start(form) }}
     <div class="contformsmartnex">
-        <div class="champformsmartnew">{{ form(form.photo) }}</div>
-        <div class="champformsmartnew">{{ form(form.nom) }}</div>
-        <div class="champformsmartnew">{{ form(form.description) }}</div>
-        <div class="champformsmartnew">{{ form(form.prix) }}</div>
+        <div class="champformsmartnew">{{ form_row(form.photo) }}</div>
+        <div class="champformsmartnew">{{ form_row(form.nom) }}</div>
+        <div class="champformsmartnew">{{ form_row(form.description) }}</div>
+        <div class="champformsmartnew">{{ form_row(form.prix) }}</div>
     </div>
-        <button class="btn">{{ button_label|default('Save') }}</button>
+        <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
 
 </div>
