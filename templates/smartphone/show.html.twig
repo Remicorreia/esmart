@@ -1,36 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}eSmart / Smartphone{% endblock %}
+{% block title %}eSmart / Smartphone / <div>{{ smartphone.nom }}</div> {% endblock %}
 
 {% block body %}
 
 <div class="custom-container">
     <h1>Smartphone</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                        <td class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
-                        </td>
-            </tr>
-                <th>Nom</th>
-                <td>{{ smartphone.nom }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ smartphone.description }}</td>
-            </tr>
-            <tr>
-                <th>Prix</th>
-                <td>{{ smartphone.prix }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="contadminaff">
+            <a class="btn-edt" href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">Moddifier</a>
+            {{ include('smartphone/_delete_form.html.twig') }}
+        </div>
 
-    <a href="{{ path('app_smartphone_index') }}">back to list</a>
+    <div class="carte-table">
+            <div class="titlephoto">
+                        <div class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                        </div>
+            </div>
+            
+            <div class="papacarte">
+                <div class="paradcarte">
+                    <div>
+                        <div><h2 class="h2smart">{{ smartphone.nom }}</h2></div>
+                        <div class="dessmart">Description</div>
+                        <div>{{ smartphone.description }}</div>
+                        </div>
+                        <div>
+                            <div>{{ smartphone.prix }}</div>
+                    </div>
+                </div>
+            </div>
+    </div>
 
-    <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
 
-    {{ include('smartphone/_delete_form.html.twig') }}
+
 </div>
 {% endblock %}
