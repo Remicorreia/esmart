@@ -3,41 +3,44 @@
 {% block title %}Smartphone index{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Smartphone index</h1>
+<div class="custom-container">
+    <div class="cont-smartphone">
+        <h1>eSmart / Smartphone</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Photo</th>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Prix</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for smartphone in smartphones %}
-            <tr>
-                <td>>{{ smartphone.photo }}</td>
-                <td>>{{ smartphone.id }}</td>
-                <td>>{{ smartphone.nom }}</td>
-                <td>>{{ smartphone.description }}</td>
-                <td>>{{ smartphone.prix }}</td>
-                <td>
-                    <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
-                    <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td>no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for smartphone in smartphones %}
+                <tr>
+                    <tr class="cont-card-smartphone">
+                        <div class="contimgsmartphones">
+                            <div class="card-smartphone">
+                                <td>>{{ smartphone.nom }}</td>
+                                <td class="contimgsmartphones"><img class="imgsmarphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt=""></td>
+                    <td>>{{ smartphone.prix }}</td>
+                            </div>
+                        </div>
+                    </tr>
+                    <td>
+                        <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
+                        <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td>no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <a href="{{ path('app_smartphone_new') }}">Create new</a>
+        <a href="{{ path('app_smartphone_new') }}">Create new</a>
+    </div>
 </div>
 {% endblock %}

@@ -6,7 +6,11 @@
 @import"./main/testcrou.scss";
 @import"./main/home.scss";
 @import"./main/smartphone.scss";
+@import"./main/loginform.scss";
 // @import"./main/carousel1.scss";
+
+*{
+}
 
 body {
   display: grid !important;
@@ -35,4 +39,48 @@ body {
 
 .table{
   color: rgb(255, 255, 255) !important;
+}
+
+.btn-del{
+  background-color:rgb(43, 43, 43) ;
+  color: rgb(255, 0, 0);
+  height: auto;
+  width: auto;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+img{
+  vertical-align: unset !important;
+}
+
+.table td{
+  border-top: unset !important;
+}
+
+tr{
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-card-smartphone{
+  background: white;
+  color: black;
+}
+
+.imgsmartphones{
+  width: 450px !important;
+  height: auto !important;
+}
+
+.contimgsmartphones{
+  background-color: rgb(255, 255, 255);
+  width: 420px !important;
+  height: 420px !important;
+  border-radius: 25px !important;
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

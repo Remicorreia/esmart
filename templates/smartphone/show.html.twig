@@ -1,23 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Smartphone{% endblock %}
+{% block title %}eSmart / Smartphone{% endblock %}
 
 {% block body %}
+
+<div class="custom-container">
     <h1>Smartphone</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ smartphone.id }}</td>
+                        <td class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                        </td>
             </tr>
-            <tr>
                 <th>Nom</th>
                 <td>{{ smartphone.nom }}</td>
-            </tr>
-            <tr>
-                <th>Photo</th>
-                <td>{{ smartphone.photo }}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -35,4 +32,5 @@
     <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
 
     {{ include('smartphone/_delete_form.html.twig') }}
+</div>
 {% endblock %}
