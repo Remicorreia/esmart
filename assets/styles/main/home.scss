@@ -1,4 +1,12 @@
 
+@keyframes move-to-center {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
 .contenerh {
     background: url("/public/images/s89-pm-0083-03-card-mockup.jpg");
@@ -53,7 +61,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    user-select: none;
   }
   
   .elog {
@@ -106,6 +113,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item2 {
@@ -119,6 +127,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item3 {
@@ -132,6 +141,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item4 {
@@ -145,6 +155,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item5{
@@ -158,6 +169,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item6 {
@@ -171,6 +183,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item7 {
@@ -184,6 +197,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item8 {
@@ -197,6 +211,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
 
 .item9 {
@@ -210,6 +225,7 @@
     border-radius: 25px;
     border: black solid 6px;
     transition: transform 0.5s;
+    user-select: none;
   }
   
 .item10 {
@@ -231,6 +247,7 @@
   color: rgb(255, 255, 255);
   text-align: center;
   transition: transform 0.5s;
+  user-select: none;
 }
 
   .alogoh{
@@ -261,11 +278,145 @@
     filter: drop-shadow(0px 0px 30px black);
   }
 
-  .plogoh{
+  .plogoh1{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh1{
+    animation: move-to-center 0.5s ease-in-out forwards;
+    color: rgb(255, 255, 255);
+  }
+
+  .plogoh2{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh2{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh3{
     color: rgb(218, 218, 218);
     font-weight: bolder;
     margin: 5px 20px;
     font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh3{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh4{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh4{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh5{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh5{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh6{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh6{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh7{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh7{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh8{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh8{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh9{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh9{
+    animation: move-to-center 0.5s ease-in-out forwards;
+  }
+
+  .plogoh10{
+    color: rgb(218, 218, 218);
+    font-weight: bolder;
+    margin: 5px 20px;
+    transition: justify-content 0.5s;
+    font-size: 20px;
+    transition: justify-content 0.5s;
+    display: flex;
+  }
+
+  .item1:hover .plogoh10{
+    animation: move-to-center 0.5s ease-in-out forwards;
+    color: rgb(255, 255, 255);
   }
 
   .item1:hover{
@@ -307,11 +458,6 @@
   .item10:hover{
     transform: scale(1.1);
   }
-
-  .alogoh:hover .plogoh{
-    color: rgb(255, 255, 255);
-  }
-
   
   .imglogosam {
     width: auto;
