@@ -65,17 +65,23 @@ tr{
 }
 
 .cont-card-smartphone{
-  background: white;
+  background: rgb(255, 255, 255);
   color: black;
+  border-radius: 25px;
 }
 
-.imgsmartphones{
+.body-card{
+  width: 4500px;
+  height: 800px;
+}
+
+.imgsmartphone{
   width: 450px !important;
   height: auto !important;
 }
 
-.contimgsmartphones{
-  background-color: rgb(255, 255, 255);
+.contimgsmartphone{
+  background: rgb(255, 255, 255);
   width: 420px !important;
   height: 420px !important;
   border-radius: 25px !important;
@@ -83,4 +89,6 @@ tr{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
+  border: 4px black solid;
 }

@@ -7,30 +7,25 @@
     <div class="cont-smartphone">
         <h1>eSmart / Smartphone</h1>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prix</th>
-                    <th>actions</th>
-                </tr>
-            </thead>
-            <tbody>
+        <table class="table ">
+            <tbody class="body-card">
             {% for smartphone in smartphones %}
                 <tr>
                     <tr class="cont-card-smartphone">
                         <div class="contimgsmartphones">
                             <div class="card-smartphone">
                                 <td>>{{ smartphone.nom }}</td>
-                                <td class="contimgsmartphones"><img class="imgsmarphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt=""></td>
-                    <td>>{{ smartphone.prix }}</td>
+                                <td class="contimgsmartphones">
+                                        <img class="imgsmarphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                                </td>
+                                <td>>{{ smartphone.prix }}</td>
+                            </div>
+                            <div class="cont-edne">
+                                <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
+                                <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
                             </div>
                         </div>
                     </tr>
-                    <td>
-                        <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
-                        <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
-                    </td>
                 </tr>
             {% else %}
                 <tr>
