@@ -7,18 +7,18 @@
     <div class="cont-smartphone">
         <h1>eSmart / Smartphone</h1>
 
-        <table class="table ">
+        <table class="table">
             <tbody class="body-card">
             {% for smartphone in smartphones %}
                 <tr>
                     <tr class="cont-card-smartphone">
-                        <div class="contimgsmartphones">
+                        <div class="">
                             <div class="card-smartphone">
                                 <td>>{{ smartphone.nom }}</td>
                                 <td class="contimgsmartphones">
-                                        <img class="imgsmarphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                                        <img class="imgsmarphones2" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
                                 </td>
-                                <td>>{{ smartphone.prix }}</td>
+                        <td>>{{ smartphone.prix }}</td>
                             </div>
                             <div class="cont-edne">
                                 <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
