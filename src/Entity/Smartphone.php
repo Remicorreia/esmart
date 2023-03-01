@@ -31,9 +31,13 @@ class Smartphone
     #[ORM\OneToMany(mappedBy: 'smartphone', targetEntity: Detail::class)]
     private Collection $details;
 
+    #[ORM\OneToMany(mappedBy: 'smartphone', targetEntity: Capacite::class)]
+    private Collection $capacite;
+
     public function __construct()
     {
         $this->details = new ArrayCollection();
+        $this->capacite = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -113,6 +117,36 @@ class Smartphone
             // set the owning side to null (unless already changed)
             if ($detail->getSmartphone() === $this) {
                 $detail->setSmartphone(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Capacite>
+     */
+    public function getCapacite(): Collection
+    {
+        return $this->capacite;
+    }
+
+    public function addCapacite(Capacite $capacite): self
+    {
+        if (!$this->capacite->contains($capacite)) {
+            $this->capacite->add($capacite);
+            $capacite->setSmartphone($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCapacite(Capacite $capacite): self
+    {
+        if ($this->capacite->removeElement($capacite)) {
+            // set the owning side to null (unless already changed)
+            if ($capacite->getSmartphone() === $this) {
+                $capacite->setSmartphone(null);
             }
         }
 

@@ -1,16 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}eSmart / Smartphone / <div>{{ smartphone.nom }}</div> {% endblock %}
+{% block title %} eSmart |  {{ smartphone.nom }}{% endblock %}
 
 {% block body %}
 
 <div class="custom-container">
-    <h1>Smartphone</h1>
 
-        <div class="contadminaff">
-            <a class="btn-edt" href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">Moddifier</a>
-            {{ include('smartphone/_delete_form.html.twig') }}
-        </div>
+
+
+<div class="parchem"><div class="chemintop"><a class="achem" href="">eSmart</a><p class="pchem">/</p><a class="achem" href="">Smartphone</a><p class="pchem">/</p>{{ smartphone.nom }}</div></div>
 
     <div class="carte-table">
             <div class="titlephoto">
@@ -31,6 +29,11 @@
                 </div>
             </div>
     </div>
+    
+    <div class="contadminaff">
+<a class="btn-edt" href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">Modifier</a>
+{{ include('smartphone/_delete_form.html.twig') }}
+</div>
 
 
 

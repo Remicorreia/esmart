@@ -37,6 +37,19 @@ body {
   margin:  125px auto !important;
 }
 
+.parchem{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chemintop{
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
 .contadminaff{
   display: flex;
   flex-direction: row;
@@ -53,6 +66,12 @@ body {
   font-weight: bold;
 }
 
+.h2smartmin{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .dessmart{
   font-size: 20px;
   font-weight: bold;
@@ -63,6 +82,9 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.papacartemin{
 }
 
 .carte-table{
@@ -78,12 +100,52 @@ body {
   flex-direction: row;
 }
 
+.carte-tablemin{
+  color: rgb(245, 245, 245);
+  padding: 15px;
+  height: auto;
+  width: 320px;
+  border-radius: 35px;
+  border: 4px solid black;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.149), rgba(0, 0, 0, 0.528));
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.titlephotomin{
+  display: flex;
+  justify-content: center;
+}
+
+.prixmin{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.prixm{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  width: auto;
+}
+
 .titlephoto{
   display: flex;
   flex-direction: column;
 }
 
 .paradcarte{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.paradcartemin{
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -100,6 +162,11 @@ body {
   margin: 0px 10px;
 }
 
+.btn-del:hover{
+  color: rgb(255, 255, 255);
+  background: rgb(255, 0, 0);
+}
+
 .btn-edt{
   background-color:rgb(43, 43, 43) ;
   color: rgb(255, 255, 255);
@@ -109,6 +176,39 @@ body {
   border-radius: 10px;
   padding: 10px;
   margin: 0px 10px;
+}
+
+.pchem{
+  margin: 0px 10px;
+}
+
+.achem :nth-of-type(1){
+  color: rgb(245, 245, 245);
+}
+
+.achem :nth-of-type(2){
+  color: rgb(245, 245, 245);
+}
+
+.achem :nth-of-type(3){
+  color: rgb(245, 245, 245);
+}
+
+.achem:hover :nth-of-type(1){
+  color: rgb(255, 255, 255);
+}
+
+.achem:hover :nth-of-type(2){
+  color: rgb(255, 255, 255);
+}
+
+.achem:hover :nth-of-type(3){
+  color: rgb(255, 255, 255);
+}
+
+.btn-edt:hover{
+  color: black;
+  background: white;
 }
 
 img{
@@ -134,10 +234,27 @@ tr{
   height: auto !important;
 }
 
+.imgsmartphonesmin{
+  width: 640px !important;
+  height: auto !important;
+}
+
 .contimgsmartphones{
   background-color: rgb(255, 255, 255);
   width: 640px !important;
   height: 640px !important;
+  border: solid black 4px !important;
+  border-radius: 25px !important;
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contimgsmartphonesmin{
+  background-color: rgb(255, 255, 255);
+  width: 265px !important;
+  height: 265px !important;
   border: solid black 4px !important;
   border-radius: 25px !important;
   overflow: hidden !important;

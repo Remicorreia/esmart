@@ -28,6 +28,7 @@ class SmartphoneType extends AbstractType
         ->add('nom')
         ->add('description')
         ->add('prix')
+        ->add('capacite')
     ;
 }
 

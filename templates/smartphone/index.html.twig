@@ -1,41 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Smartphone index{% endblock %}
+{% block title %}eSmart | smartphone{% endblock %}
+
 
 {% block body %}
-<div class="custom-container">
-    <div class="cont-smartphone">
-        <h1>eSmart / Smartphone</h1>
 
-        <table class="table">
-            <tbody class="body-card">
+<div class="custom-container">
+
+<div class="parchem"><div class="chemintop"><a class="achem" href="">eSmart</a><p class="pchem">/</p><a class="achem" href="">Smartphone</a></div></div>
+
+<a href="{{ path('app_smartphone_new') }}">Create new</a>
+
             {% for smartphone in smartphones %}
-                <tr>
-                    <tr class="cont-card-smartphone">
-                        <div class="">
-                            <div class="card-smartphone">
-                                <td>>{{ smartphone.nom }}</td>
-                                <td class="contimgsmartphones">
-                                        <img class="imgsmarphones2" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
-                                </td>
-                        <td>>{{ smartphone.prix }}</td>
-                            </div>
-                            <div class="cont-edne">
-                                <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
-                                <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
+
+        <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
+        <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
+
+            <div class="carte-tablemin">
+
+        <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
+            
+                    <div class="titlephotomin">
+                                <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                                </div>
+                    </div>
+                    
+                    <div class="papacartemin">
+                        <div class="paradcartemin">
+                            <div>
+                                </div>
+                                <div>
+                                    <div class="prixmin">{{ smartphone.prix }}</div>
                             </div>
                         </div>
-                    </tr>
-                </tr>
-            {% else %}
-                <tr>
-                    <td>no records found</td>
-                </tr>
+                    </div>
+            </div>
             {% endfor %}
-            </tbody>
-        </table>
 
-        <a href="{{ path('app_smartphone_new') }}">Create new</a>
     </div>
 </div>
 {% endblock %}
