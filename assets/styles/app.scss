@@ -78,6 +78,36 @@ body {
   margin-top: 20px;
 }
 
+.a-crea{
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.a-carte{
+  transition: transform 0.5s;
+}
+
+.a-carte:hover{
+  transform: scale(1.1);
+}
+
+.par-smar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.d-carte{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
 .papacarte{
   display: flex;
   justify-content: center;

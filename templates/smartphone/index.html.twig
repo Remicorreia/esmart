@@ -10,34 +10,38 @@
 
 <div class="parchem"><div class="chemintop"><a class="achem" href="">eSmart</a><p class="pchem">/</p><a class="achem" href="">Smartphone</a></div></div>
 
-<a href="{{ path('app_smartphone_new') }}">Create new</a>
+<a class="a-crea" href="{{ path('app_smartphone_new') }}">Create new</a>
 
+<div class="par-smar">
             {% for smartphone in smartphones %}
 
-        <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">show</a>
-        <a href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">edit</a>
 
-            <div class="carte-tablemin">
+        <div class="d-carte">
+            <a class="a-carte" href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">
+                <div class="carte-tablemin">
 
-        <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
-            
-                    <div class="titlephotomin">
-                                <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
-                                </div>
-                    </div>
-                    
-                    <div class="papacartemin">
-                        <div class="paradcartemin">
-                            <div>
-                                </div>
+                    <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
+                
+                        <div class="titlephotomin">
+                                    <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                                    </div>
+                        </div>
+                        
+                        <div class="papacartemin">
+                            <div class="paradcartemin">
                                 <div>
-                                    <div class="prixmin">{{ smartphone.prix }}</div>
+                                    </div>
+                                    <div>
+                                        <div class="prixmin">{{ smartphone.prix }}</div>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-            </div>
+                </div>
+            </a>
+        </div>
             {% endfor %}
+</div>
 
     </div>
 </div>
