@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Smartphone;
+use App\Service\GestionnaireImage;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -20,14 +21,14 @@ class SmartphoneCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            ImageField::new('photo')
+            ->setBasePath('/images')
+            ->setUploadDir('public/images')->setUploadedFileNamePattern('[randomhash].[extension]')
+            ->setRequired(false),
             TextField::new('nom'),
             TextEditorField::new('description'),
             NumberField::new('prix'),
-            ImageField::new('photo')
-           ->setUploadDir('public/images')
-           ->setBasePath('/images')
-           ->setFormType(FileUploadType::class),
+            
 
         ];
     }

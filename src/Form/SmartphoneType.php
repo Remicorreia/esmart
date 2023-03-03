@@ -18,7 +18,7 @@ class SmartphoneType extends AbstractType
             "required" => false,
             "constraints" => [
                 new File([
-                    "mimeTypes"         => [ "image/gif", "image/jpeg", "image/png" ],
+                    "mimeTypes"         => [ "image/gif", "image/jpeg", "image/png", "image/avif" ],
                     "mimeTypesMessage"  => "Les formats autorisés sont gif, jpg, png",
                     "maxSize"           => "8Mi",
                     "maxSizeMessage"    => "Le fichier ne peut pas peser plus de 2Mo"

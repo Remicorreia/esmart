@@ -11,12 +11,6 @@
 
 <div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a><p class="pchem">/</p>{{ smartphone.nom }}</div></div>
 
-        <div class="contadminaff">
-            <a class="btn-edt" href="{{ path('app_smartphone_edit', {'id': smartphone.id}) }}">Moddifier</a>
-            {{ include('smartphone/_delete_form.html.twig') }}
-        </div>
-
-
     <div class="carte-table">
             <div class="titlephoto">
                         <div class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
