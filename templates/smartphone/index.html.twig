@@ -10,12 +10,12 @@
 
 <div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="">Smartphone</a></div></div>
 
+
     <div class="contfiltsmar">
 
 <div class="filterdiv"></div>
 
     <div class="parparsmart">
-            
             <div class="par-smar">
                 
                         {% for smartphone in smartphones %}
@@ -28,7 +28,6 @@
                                 <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
                             
                                     <div class="titlephotomin">
-                                                <div class="contimgsmartphonesmin"  "contimgsmartphonesmin2"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
                                                 <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
                                                 </div>
                                     </div>
