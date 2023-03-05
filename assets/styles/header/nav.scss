@@ -19,6 +19,10 @@ nav {
   justify-content: center;
 }
 
+.a-logo{
+  height: min-content;
+}
+
 .parnav {
   display: flex;
   justify-content: center;
@@ -88,6 +92,7 @@ a{
   list-style: none;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  caret-color: transparent;
 }
 
 a:hover {
