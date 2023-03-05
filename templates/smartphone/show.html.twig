@@ -9,31 +9,66 @@
 
 
 
-<div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a><p class="pchem">/</p>{{ smartphone.nom }}</div></div>
+    <div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a><p class="pchem">/</p><a class="achem" href="">{{ smartphone.nom }}</a></div></div>
 
-    <div class="carte-table">
-            <div class="titlephoto">
-                        <div class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+        <div class="parcom">
+            <div class="carte-table">
+                <div class="titlephoto">
+                    <div class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+                    </div>
+                </div>
+                
+                <div class="papacarte">
+                    <div class="paradcarte">
+                        <div class="puinsp">
+                            <div><h2 class="h2smart">{{ smartphone.nom }}</h2></div>
+                            <div class="slosma">{{ smartphone.description }}</div>
+                            <div class="filscarte">
+                                <div class="carasmar">
+                                    <div class="parcapa">
+                                        <div class="capaciteshow">Marque :</div>
+                                        <div class="capaciteshow2"></div>
+                                    </div>
+                                    <div class="parcapa">
+                                        <div class="capaciteshow">Capacité :</div>
+                                        <div class="capaciteshow2">Go</div>
+                                    </div>
+                                    <div class="parcapa">
+                                        <div class="capaciteshow">Taille d'écran :</div>
+                                        <div class="capaciteshow2">″</div>
+                                    </div>
+                                    <div class="parcapa">
+                                        <div class="capaciteshow">Année :</div>
+                                        <div class="capaciteshow2"></div>
+                                    </div>
+                                    <div class="parcapa">
+                                        <div class="capaciteshow">Autonomie moyenne :</div>
+                                        <div class="capaciteshow2">h</div>
+                                    </div>
+                                    <div class="prixshow">{{ smartphone.prix }}€</div>
+                                </div>
+                            </div>
                         </div>
-            </div>
-            
-            <div class="papacarte">
-                <div class="paradcarte">
-                    <div>
-                        <div><h2 class="h2smart">{{ smartphone.nom }}</h2></div>
-                        <div class="dessmart">Description</div>
-                        <div>{{ smartphone.description }}</div>
-                        </div>
-                        <div>
-                            <div>{{ smartphone.prix }}</div>
                     </div>
                 </div>
             </div>
-    </div>
-</div>
+            <div class="passco">
 
+            <div class="smartcoshow">{{ smartphone.nom }}</div>
 
+            <div class="parrecapcomshow">
+                <div class="quant">
+                    <p class='parquant'>Quantité</p>
+                        <div class="ajoutquant">
+                            <p class="btplus"><</p>
+                            <P class="quantact">1</P>
+                            <p class="btplus">></p>
+                        </div>
+                        <div class="pancom">Ajouter auu panier</div>
+                </div>
+            </div>
 
-
+            </div>
+        </div>
 </div>
 {% endblock %}

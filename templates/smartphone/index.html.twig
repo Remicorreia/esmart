@@ -22,7 +22,6 @@
 
 
                     <div class="d-carte">
-                        <a class="a-carte" href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">
                             <div class="carte-tablemin">
                             
                                     <div class="titlephotomin">
@@ -34,13 +33,16 @@
                                         <div class="paradcartemin">
                                             <div class="avh2">
                                                 <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
+                                                <h2 class="slosmarmin">{{ smartphone.description }}</h2>
                                                 <div class="prixmin">{{ smartphone.prix }}€</div>
-                                                <div class="voirplus"><p class="voir-t">Voir plus</p></div>
+                                                
+                                                <a class="a-carte" href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">
+                                                    <div class="conn">Voir plus</div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                             </div>
-                        </a>
                     </div>
                         {% endfor %}
             </div>

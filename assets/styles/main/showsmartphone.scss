@@ -1,0 +1,167 @@
+
+.carte-table{
+    color: rgb(245, 245, 245);
+    padding: 30px;
+    height: auto;
+    width: 1100px;
+    border-radius: 35px;
+    background: linear-gradient(217deg, rgba(114, 114, 114, 0.35), rgb(32 32 32 / 0.35) 70.71%), linear-gradient(127deg, rgb(110 110 110 / 0.35), rgb(37 37 37 / 0.35) 70.71%), linear-gradient(336deg, rgb(77 77 77 / 0.35), rgb(0 0 0 / 0.35) 70.71%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgb(0, 0, 0) 0px 0px 20px -5px, rgb(0, 0, 0) 0px 8px 16px -8px;
+    text-shadow: 0px 0px 25px black
+  }
+
+  .titlephoto{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contimgsmartphones{
+    width: 640px !important;
+    height: 640px !important;
+    border-radius: 25px !important;
+    overflow: hidden !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 116px rgba(255, 255, 255, 0.5));
+  }
+
+  .imgsmartphonesmin{
+    width: 640px !important;
+    height: auto !important;
+  }
+
+  .papacarte{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .puinsp{
+    height: 100%;
+    width: 360px;
+  }
+
+  .filscarte{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .h2smart{
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .slosma{
+    font-size: 20px;
+  }
+
+  .prixshow{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 140px;
+  }
+
+  .parcom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .passco{
+    text-shadow: 0px 0px 25px black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 35px;
+    background: linear-gradient(217deg, rgba(114, 114, 114, 0.35), rgb(32 32 32 / 0.35) 70.71%), linear-gradient(336deg, rgb(77 77 77 / 0.35), rgb(0 0 0 / 0.35) 70.71%), linear-gradient(127deg, rgb(110 110 110 / 0.35), rgb(37 37 37 / 0.35) 70.71%);
+    box-shadow: rgb(0, 0, 0) 0px 0px 20px -5px, rgb(0, 0, 0) 0px 8px 16px -8px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    height: 700px;
+  }
+
+  .smartcoshow{
+    position: absolute;
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .carasmar{
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .parcapa{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .parrecapcomshow{
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .parquant{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .quant{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .ajoutquant{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btplus{
+    font-size: 20px;
+    margin: 0px 10px;
+  }
+
+  .quantact{
+    font-size: 20px;
+    margin: 0px 10px;
+  }
+
+  .pancom{
+    margin-top: 25px;
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  color: #ffffff;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  height: 45px;
+  max-width: 150px;
+  padding: 14px 18px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  }
