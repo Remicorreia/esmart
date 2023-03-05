@@ -26,7 +26,7 @@ class SmartphoneCrudController extends AbstractCrudController
             ->setUploadDir('public/images')->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setRequired(false),
             TextField::new('nom'),
-            TextEditorField::new('description'),
+            TextField::new('description'),
             NumberField::new('prix'),
             
 
