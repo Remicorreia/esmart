@@ -1,12 +1,8 @@
 nav {
-  backdrop-filter: blur(14px);
-  background: linear-gradient(rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0.875));
+  background: linear-gradient(rgb(43, 43, 43),rgba(43, 43, 43, 0))  !important;
   width: 100%;
   height: 53.4px;
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -25,7 +21,6 @@ nav {
 
 .parnav {
   display: flex;
-  justify-content: center;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -120,28 +115,19 @@ a:hover {
 }
 
 .search {
-  border: white solid 2px !important;
   border-radius: 25px !important;
   padding: 3px 6px !important;
   outline: unset !important;
 }
 
 .reche1 {
+  caret-color: white;
   background-color: rgba(0, 0, 0, 0) !important;
   color: white !important;
   box-sizing: unset !important;
   border-color: unset !important;
   border-style: unset !important;
   outline: unset !important;
-}
-
-.reche2 {
-  background-color: rgba(0, 0, 0, 0) !important;
-  color: white !important;
-  outline: unset !important;
-  box-sizing: unset !important;
-  border-color: unset !important;
-  border-style: unset !important;
 }
 
 .nav3 {
@@ -150,13 +136,19 @@ a:hover {
 }
 
 .panier {
+  position: relative;
   list-style: none;
   text-decoration: none;
   align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 10px;
+  margin: 0px 10px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .conn {
@@ -187,7 +179,7 @@ a:hover {
 
 .ulmarque {
   backdrop-filter: blur(14px);
-  background: rgba(0, 0, 0, 0.649);
+  background-color: rgba(43, 43, 43, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,11 +205,33 @@ a:hover {
 }
 
 .cennav {
-  height: 53.4px;
+  height: 59.98px;
   display: flex;
   align-items: center;
 }
 
 li.li1:nth-of-type(2) {
   // max-width: 85.3px;
+}
+
+.contimgpan{
+  height: auto;
+  width: auto;
+}
+
+.imgpan{
+}
+
+.contpan{
+  text-align: center;
+  border-radius: 100px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 700;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  user-select: none;
+  vertical-align: middle;
 }

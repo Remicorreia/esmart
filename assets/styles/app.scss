@@ -18,6 +18,10 @@ h1,h2,h3,h4,h5,p,img,div{
   caret-color: transparent;
 }
 
+form{
+  outline: none !important;
+}
+
 body {
   // background: url("public/images/pexels-tyler-lastovich-719399.jpg");
   display: grid !important;
@@ -144,9 +148,6 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 20px;
-}
-
-.papacartemin{
 }
 
 .carte-tablemin{
