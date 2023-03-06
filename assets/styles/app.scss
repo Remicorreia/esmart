@@ -14,6 +14,17 @@
 *{
 }
 
+::placeholder{
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+
+input[type="text"]:focus {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+
+
 h1,h2,h3,h4,h5,p,img,div{
   caret-color: transparent;
 }
