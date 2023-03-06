@@ -3,7 +3,7 @@
         <div class="parnav">
                 <a class="a-logo" href="{{ path('app_home') }}" class="homebt1">
                     <div class="cennav">
-                        <img class="logo2" src=  '{{ asset("images/logo-esmart2.png")}}' alt="">
+                        <img class="logo2" src='{{ asset("images/logo-esmart2.png")}}' alt="">
                     </div>
                 </a>
 
@@ -43,13 +43,15 @@
             <div class="cennav">
                 <div class="nav3">
                     <ul class="ul2">
-                    <li class="panier">
+                    <li class="bordrond" title="Panier">
                         <div class="contpan">0</div>
-                        <div class="contimgpan">
-                            <img class="imgpan" src="{{ asset('images/icons8-caddie-30.png') }}" alt="">
-                        </div>
                     </li>
-                    <a class="a-con" href="{{ path('app_login') }}"><li class="conn">Connexion</li></a>
+                    <a class="a-con" href="{{ path('app_login') }}">
+                        <li class="bordrond">
+                            <div><img class="imguser" src="{{ asset("images/icons8-utilisateur-30.png") }}" alt=''>
+                            </div>
+                        </li>
+                    </a>
                     </ul>
                 </div>
             </div>
