@@ -5,7 +5,7 @@
     box-shadow: rgb(0, 0, 0) 0px 0px 20px -5px, rgb(0, 0, 0) 0px 8px 16px -8px;
     border-radius: 35px;
     width: 450px;
-    height: 490px;
+    height: 550px;
     padding: 20px;
 }
 
@@ -55,7 +55,17 @@
 .seco{
     background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb) !important;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 70px;
+}
+
+.solutionconn{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    margin: 25px auto 0;
+    width: 237px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .aideconn:hover{

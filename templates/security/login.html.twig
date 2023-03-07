@@ -4,6 +4,9 @@
 
 {% block body %}
 <div class="custom-container">
+
+<div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="">Connexion</a></div></div>
+
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -44,13 +47,13 @@
                     </div>
                 #}
             </div>
+            <div class="solutionconn">
+                <a href="" class="aideconn">Mot de passe oublié</a> 
+                <a href="" class="aideconn">S'enregistrer</a> 
+            </div>
                 <button class="btn btn-lg btn-primary seco" type="submit">
                     Se connecter
                 </button>
-        </div>
-        <div class="solutionconn">
-    <a class"aideconn" href="">Mot de passe oublié</a> 
-    <a class"aideconn" href="">S'enregistrer</a> 
         </div>
     </div>
 </form>

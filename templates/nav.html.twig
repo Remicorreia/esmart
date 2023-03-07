@@ -1,3 +1,5 @@
+<div class="flounav"></div>
+
 <nav>
 <div class="contnav">
         <div class="parnav">
@@ -23,6 +25,7 @@
                             <li class="limarque"><a class="a-nav" href="amarque">Oppo</a></li>
                             <li class="limarque"><a class="a-nav" href="amarque">Sony</a></li>
                             <li class="limarque"><a class="a-nav" href="amarque">Google</a></li>
+                            <li class="limarque"><a class="a-nav" href="{{ path('app_smartphone_index') }}">OnePlus</a></li>
                             <li class="limarque"><a class="a-nav" href="amarque">Autres</a></li>
                         </ul>
                 </div>
@@ -35,9 +38,8 @@
             <div class="cennav">
                 <div class="search">
                     <form>
-                        <input class="reche1" type="search" name="q" placeholder="Recherche">
+                        <input class="reche1" type="search" name="q" placeholder="Recherche" autocomplete="off">
                     </form>
-                    
                 </div>
             </div>
             <div class="cennav">
@@ -46,12 +48,20 @@
                     <li class="bordrond" title="Panier">
                         <div class="contpan">0</div>
                     </li>
-                    <a class="a-con" href="{{ path('app_login') }}">
+                    <div class="parcompte">
                         <li class="bordrond">
                             <div><img class="imguser" src="{{ asset("images/icons8-utilisateur-30.png") }}" alt=''>
                             </div>
+                            <div class="inscon">
+                            <div class="div-conn">
+                                <a href="{{ path('app_login') }}" class="a-conn">Connexion</a>
+                            </div>
+                            <div class="div-ins">
+                                <a href="" class="a-conn">S'enregistrer</a>
+                            </div>
+                            </div>
                         </li>
-                    </a>
+                    </div>
                     </ul>
                 </div>
             </div>

@@ -1,3 +1,11 @@
+
+input[type=search]::-ms-clear {
+  display: none; width : 0; height: 0;
+  }
+input[type=search]::-ms-reveal {
+  display: none; width : 0; height: 0;
+  }
+
 nav {
   background: linear-gradient(rgb(43, 43, 43),rgba(43, 43, 43, 0))  !important;
   width: 100%;
@@ -13,6 +21,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
+  backdrop-filter: blur(2px);
 }
 
 .a-logo{
@@ -108,6 +117,7 @@ a:hover {
 }
 
 .li1 {
+  position: relative;
   display: flex;
   padding: 0px 15px;
   list-style: none;
@@ -139,6 +149,7 @@ a:hover {
 }
 
 .bordrond {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,44 +158,24 @@ a:hover {
   display: flex;
   border: white solid 2px;
   border-radius: 100px;
-}
-
-.conn {
-  align-items: center;
-  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #ffffff;
   display: flex;
-  font-size: 12px;
-  justify-content: center;
-  height: 35px;
-  max-width: 100px;
-  padding: 14px 18px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .parulmarque{
 }
 
 .ulmarque {
-  backdrop-filter: blur(14px);
-  background-color: rgba(43, 43, 43, 0.7);
+  position: absolute;
+  margin-top: 20px;
+  background: rgba(43, 43, 43, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
+  border-radius: 8px;
   display: none;
+  text-align: center;
 }
 
 .parmarque:hover .ulmarque {
@@ -246,4 +237,47 @@ li.li1:nth-of-type(2) {
   width: auto;
   height: 25px;
   margin-top: 5px;
+}
+
+.parcompte{
+  display: flex;
+  flex-direction: column;
+}
+
+.inscon{
+  padding: 10px;
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  background: rgba(43, 43, 43, 0.4);
+  border-radius: 15px;
+  margin-top: 135px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.parcompte:hover .inscon{
+  display: inline;
+}
+
+.a-conn{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  max-width: 100px;
+  padding: 14px 18px;
+  margin: 5px auto;
+  transition: transform 0.5s;
+}
+
+.a-conn:hover{
+  transform: scale 1.1;
 }
