@@ -53,12 +53,24 @@
                             <div><img class="imguser" src="{{ asset("images/icons8-utilisateur-30.png") }}" alt=''>
                             </div>
                             <div class="inscon">
+                            {% if app.user %}
+                                
+                            <div class="div-conn">
+                        <a href="{{ path('app_logout') }}" class="a-conn">Déconnexion</a>
+                    </div>
+
+                            {% else %}
+
                             <div class="div-conn">
                                 <a href="{{ path('app_login') }}" class="a-conn">Connexion</a>
                             </div>
+                            
                             <div class="div-ins">
-                                <a href="" class="a-conn">S'enregistrer</a>
+                                <a href="{{ path('app_register') }}" class="a-conn">S'enregistrer</a>
                             </div>
+                            
+                            {% endif %}
+
                             </div>
                         </li>
                     </div>

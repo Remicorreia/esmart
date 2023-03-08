@@ -177,7 +177,7 @@ body {
 }
 
 .carte-tablemin{
-  height: 500px;
+  height: 450px;
   background: linear-gradient(217deg, rgba(114, 114, 114, 0.35), rgb(32 32 32 / 0.35) 70.71%), linear-gradient(127deg, rgb(110 110 110 / 0.35), rgb(37 37 37 / 0.35) 70.71%), linear-gradient(336deg, rgb(77 77 77 / 0.35), rgb(0 0 0 / 0.35) 70.71%);
   backdrop-filter: blur(10px);
   width: 250px;
@@ -190,13 +190,8 @@ body {
 
 }
 
-.a-carte:hover .contimgsmartphonesmin{
+.carte-tablemin:hover .contimgsmartphonesmin{
   filter: drop-shadow(0 0 13px #fff);
-  transform: scale(1.050);
-}
-
-a.a-carte:hover .contimgsmartphonesmin{
-  filter: drop-shadow(00 13px #fff);
   transform: scale(1.050);
 }
 
@@ -315,11 +310,6 @@ img{
 
 .table td{
   border-top: unset !important;
-}
-
-tr{
-  display: flex;
-  flex-direction: column;
 }
 
 .cont-card-smartphone{

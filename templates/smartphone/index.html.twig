@@ -23,25 +23,21 @@
 
                     <div class="d-carte">
                             <div class="carte-tablemin">
-                            
-                                    <div class="titlephotomin">
-                                                <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
-                                                </div>
+
+                                <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}" class="showimg">
+                                    <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
                                     </div>
+                                </a>
                                     
-                                    <div class="papacartemin">
-                                        <div class="paradcartemin">
-                                            <div class="avh2">
-                                                <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
-                                                <h2 class="slosmarmin">{{ smartphone.description }}</h2>
-                                                <div class="prixmin">{{ smartphone.prix }}€</div>
-                                                
-                                                <a class="a-carte" href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}">
-                                                    <div class="conn">Voir plus</div>
-                                                </a>
-                                            </div>
+                                <div class="papacartemin">
+                                    <div class="paradcartemin">
+                                        <div class="avh2">
+                                            <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
+                                            <h2 class="slosmarmin">{{ smartphone.description }}</h2>
+                                            <div class="prixmin">{{ smartphone.prix }}€</div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
                     </div>
                         {% endfor %}
