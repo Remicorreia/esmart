@@ -158,7 +158,6 @@ a:hover {
   display: flex;
   border: white solid 2px;
   border-radius: 100px;
-  display: flex;
   flex-direction: column;
 }
 
@@ -248,7 +247,7 @@ li.li1:nth-of-type(2) {
   padding: 10px;
   position: absolute;
   width: 120px;
-  height: 100px;
+  min-height: 100px;
   background: rgba(43, 43, 43, 0.4);
   border-radius: 15px;
   margin-top: 135px;
@@ -280,4 +279,13 @@ li.li1:nth-of-type(2) {
 
 .a-conn:hover{
   transform: scale 1.1;
+}
+
+.div-conn{
+  font-size: 12px;
+}
+
+.hrnom{
+  color: white;
+  margin: 0px;
 }

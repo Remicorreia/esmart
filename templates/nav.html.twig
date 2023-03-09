@@ -54,10 +54,29 @@
                             </div>
                             <div class="inscon">
                             {% if app.user %}
-                                
+                                <div class="nomnav">
+
+                            <div class="div-conn">
+
+                            {{app.user.nom}}
+                            {{app.user.prenom}}
+
+                            <hr class="hrnom">
+
+                            </div>
+                        <a href="{{ path('app_user_edit', {'id': app.user.id}) }}" class="a-conn">Profil</a>
+                    </div>
+                    
                             <div class="div-conn">
                         <a href="{{ path('app_logout') }}" class="a-conn">Déconnexion</a>
                     </div>
+
+                    <style>
+                        .inscon{
+                            min-height: 100px;
+                            margin-top: 100px,
+                            }
+                    </style>
 
                             {% else %}
 

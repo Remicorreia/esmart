@@ -22,12 +22,6 @@ class UserType extends AbstractType
         */
 
         $builder
-        ->add('password', TextType::class,[
-            "mapped" => false,
-        //  "required" => $client->getId()  ? false : true
-            "required" => !$client->getId()
-        ])
-        ->add('email')
         ->add('nom')
         ->add('prenom')
         ->add('civilite')

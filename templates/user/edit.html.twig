@@ -1,13 +1,18 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <h1>Edit User</h1>
+
+<div class="custom-container">
+
+<div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="">User</a><p class="pchem">/</p><a class="achem" href="">{{ user.nom }} {{ user.prenom }}</a><p class="pchem">/</p><a class="achem" href="">Modifier</a></div></div>
+
+    <h1>Modifier mes informations</h1>
 
     {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_user_index') }}">back to list</a>
+</div>
 
-    {{ include('user/_delete_form.html.twig') }}
 {% endblock %}
