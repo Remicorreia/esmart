@@ -24,7 +24,14 @@ class UserType extends AbstractType
         $builder
         ->add('nom')
         ->add('prenom')
-        ->add('civilite')
+        ->add("civilite", ChoiceType::class , [
+            "label" => "Civilité",
+            "choices" =>[
+                "Mme" => "f",
+                "M." => "h",
+            ],
+            "expanded" => true
+        ])
         ;
     }
 

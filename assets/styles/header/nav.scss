@@ -30,11 +30,36 @@ nav {
 
 .parnav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1020px;
+}
+
+.redi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.rediul{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 1440px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.redili{
+  margin: 0 10px;
 }
 
 .logo2 {
@@ -190,6 +215,11 @@ a:hover {
   list-style: none;
   text-decoration: none;
   padding: 4px;
+}
+
+.etirnav{
+  display: flex;
+  flex-direction: row;
 }
 
 .cennav {

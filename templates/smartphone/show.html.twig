@@ -9,7 +9,7 @@
 
 
 
-    <div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">/</p><a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a><p class="pchem">/</p><a class="achem" href="">{{ smartphone.nom }}</a></div></div>
+    <div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">></p><a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a><p class="pchem">></p><a class="achem" href="">{{ smartphone.nom }}</a></div></div>
 
         <div class="parcom">
             <div class="carte-table">
@@ -61,10 +61,33 @@
                     <p class='parquant'>Quantité</p>
                         <div class="ajoutquant">
                             <p class="btplus"><</p>
-                            <P class="quantact">1</P>
+
+                            <P class="quantact qte">1</P>
+
+                            
+
                             <p class="btplus">></p>
                         </div>
-                    <a href="{{ path('app_panier', {'id': smartphone.id}) }}" class="pancom">Ajouter au panier</a>
+
+                        {# <div class="d-inline-flex  justify-content-between">
+							<button class="btn btn-primary btnPlusMoins" name="qte" type="number">+</button>
+							<div class="quantite">1</div>
+							<button class="btn btn-danger btnPlusMoins" name="qte" type="number">-</button>
+						</div> #}
+
+
+                    <a href="{{ path('app_panier_ajouter', {'id': smartphone.id, qte: 1}) }}" class="pancom ajax">Ajouter au panier</a>
+                {# <div class="contpan" id="nombre"></div> #}
+                    
+                    
+                    {# <div class="d-flex justify-content-between mt-3">
+                    <a href="{{ path("app_panier_ajouter", {id: smartphone.id, qte: 1}) }}" class="btn btn-primary ajax">
+                        <i class="fa fa-cart-arrow-down"></i>
+                        Ajouter au panier
+                    </a>
+                    </div> #}
+
+
                 </div>
             </div>
 
