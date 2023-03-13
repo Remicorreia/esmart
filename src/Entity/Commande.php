@@ -20,7 +20,7 @@ class Commande
     private ?string $montant = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date_eregistrement = null;
+    private ?\DateTimeInterface $dateEnregistrement = null;
 
     #[ORM\ManyToOne(inversedBy: 'commandes')]
     private ?User $user = null;
@@ -28,9 +28,13 @@ class Commande
     #[ORM\OneToMany(mappedBy: 'commande', targetEntity: Detail::class)]
     private Collection $details;
 
+    #[ORM\Column(length: 255)]
+    private ?string $etat = null;
+
     public function __construct()
     {
         $this->details = new ArrayCollection();
+        $this->etat="en Attente";
     }
 
     public function getId(): ?int
@@ -50,14 +54,14 @@ class Commande
         return $this;
     }
 
-    public function getDateEregistrement(): ?\DateTimeInterface
+    public function getDateEnregistrement(): ?\DateTimeInterface
     {
-        return $this->date_eregistrement;
+        return $this->dateEnregistrement;
     }
 
-    public function setDateEregistrement(\DateTimeInterface $date_eregistrement): self
+    public function setDateEnregistrement(\DateTimeInterface $dateEnregistrement): self
     {
-        $this->date_eregistrement = $date_eregistrement;
+        $this->dateEnregistrement = $dateEnregistrement;
 
         return $this;
     }
@@ -100,6 +104,18 @@ class Commande
                 $detail->setCommande(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getEtat(): ?string
+    {
+        return $this->etat;
+    }
+
+    public function setEtat(string $etat): self
+    {
+        $this->etat = $etat;
 
         return $this;
     }

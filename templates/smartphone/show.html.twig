@@ -1,97 +1,105 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %} eSmart |  {{ smartphone.nom }}{% endblock %}
+{% block title %}
+	eSmart |
+	{{ smartphone.nom }}
+{% endblock %}
 
 {% block body %}
 
-<div class="custom-container">
+	<div class="custom-container">
 
 
+		<div class="parchem">
+			<div class="chemintop">
+				<a class="achem" href="{{ path('app_home') }}">eSmart</a>
+				<p class="pchem">></p>
+				<a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a>
+				<p class="pchem">></p>
+				<a class="achem" href="">{{ smartphone.nom }}</a>
+			</div>
+		</div>
 
-    <div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">></p><a class="achem" href="{{ path('app_smartphone_index') }}">Smartphone</a><p class="pchem">></p><a class="achem" href="">{{ smartphone.nom }}</a></div></div>
+		<div class="parcom">
+			<div class="carte-table">
+				<div class="titlephoto">
+					<div class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+					</div>
+				</div>
 
-        <div class="parcom">
-            <div class="carte-table">
-                <div class="titlephoto">
-                    <div class="contimgsmartphones"><img class="imgsmartphones" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
-                    </div>
-                </div>
-                
-                <div class="papacarte">
-                    <div class="paradcarte">
-                        <div class="puinsp">
-                            <div><h2 class="h2smart">{{ smartphone.nom }}</h2></div>
-                            <div class="slosma">{{ smartphone.description }}</div>
-                            <div class="filscarte">
-                                <div class="carasmar">
-                                    <div class="parcapa">
-                                        <div class="capaciteshow">Marque :</div>
-                                        <div class="capaciteshow2"></div>
-                                    </div>
-                                    <div class="parcapa">
-                                        <div class="capaciteshow">Capacité :</div>
-                                        <div class="capaciteshow2">Go</div>
-                                    </div>
-                                    <div class="parcapa">
-                                        <div class="capaciteshow">Taille d'écran :</div>
-                                        <div class="capaciteshow2">″</div>
-                                    </div>
-                                    <div class="parcapa">
-                                        <div class="capaciteshow">Année :</div>
-                                        <div class="capaciteshow2"></div>
-                                    </div>
-                                    <div class="parcapa">
-                                        <div class="capaciteshow">Autonomie moyenne :</div>
-                                        <div class="capaciteshow2">h</div>
-                                    </div>
-                                    <div class="prixshow">{{ smartphone.prix }}€</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="passco">
+				<div class="papacarte">
+					<div class="paradcarte">
+						<div class="puinsp">
+							<div>
+								<h2 class="h2smart">{{ smartphone.nom }}</h2>
+							</div>
+							<div class="slosma">{{ smartphone.description }}</div>
+							<div class="filscarte">
+								<div class="carasmar">
+									<div class="parcapa">
+										<div class="capaciteshow">Marque :</div>
+										<div class="capaciteshow2"></div>
+									</div>
+									{% if smartphone.capacite %}
+										<div class="parcapa">
+											<div class="capaciteshow">Capacité :</div>
+											<div class="capaciteshow2">{{ smartphone.capacite.valeur }}Go</div>
+										</div>
+									{% endif %}
+									<div class="parcapa">
+										<div class="capaciteshow">Taille d'écran :</div>
+										<div class="capaciteshow2">{{ (smartphone.pouces) }}″</div>
+									</div>
+									<div class="parcapa">
+										<div class="capaciteshow">Année :</div>
+										<div class="capaciteshow2">{{ (smartphone.annee) }}</div>
+									</div>
+									<div class="parcapa">
+										<div class="capaciteshow">Autonomie moyenne :</div>
+										<div class="capaciteshow2">jusqu'à {{ (smartphone.autonomie) }}h</div>
+									</div>
+									<div class="prixshow">{{ smartphone.prix }}€</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="passco">
 
-            <div class="smartcoshow">{{ smartphone.nom }}</div>
+				<div class="smartcoshow">{{ smartphone.nom }}</div>
 
-            <div class="parrecapcomshow">
-                <div class="quant">
-                    <p class='parquant'>Quantité</p>
-                        <div class="ajoutquant">
-                            <p class="btplus"><</p>
+				<div class="parrecapcomshow">
+					<div class="quant">
+						<p class='parquant'>Quantité</p>
+						<div class="ajoutquant">
+							<p class="btplus"><</p><Pclass="quantactqte">1</P><pclass="btplus">></p>
+						</div>
 
-                            <P class="quantact qte">1</P>
-
-                            
-
-                            <p class="btplus">></p>
-                        </div>
-
-                        {# <div class="d-inline-flex  justify-content-between">
-							<button class="btn btn-primary btnPlusMoins" name="qte" type="number">+</button>
-							<div class="quantite">1</div>
-							<button class="btn btn-danger btnPlusMoins" name="qte" type="number">-</button>
-						</div> #}
-
-
-                    <a href="{{ path('app_panier_ajouter', {'id': smartphone.id, qte: 1}) }}" class="pancom ajax">Ajouter au panier</a>
-                {# <div class="contpan" id="nombre"></div> #}
-                    
-                    
-                    {# <div class="d-flex justify-content-between mt-3">
-                    <a href="{{ path("app_panier_ajouter", {id: smartphone.id, qte: 1}) }}" class="btn btn-primary ajax">
-                        <i class="fa fa-cart-arrow-down"></i>
-                        Ajouter au panier
-                    </a>
-                    </div> #}
+						{# <div class="d-inline-flex  justify-content-between">
+													<button class="btn btn-primary btnPlusMoins" name="qte" type="number">+</button>
+													<div class="quantite">1</div>
+													<button class="btn btn-danger btnPlusMoins" name="qte" type="number">-</button>
+												</div> #}
 
 
-                </div>
-            </div>
+						<a href="{{ path('app_panier_ajouter', {'id': smartphone.id, qte: 1}) }}" class="pancom ajax">Ajouter au panier</a>
+						{# <div class="contpan" id="nombre"></div> #}
 
-            </div>
-        </div>
-</div>
+
+						{# <div class="d-flex justify-content-between mt-3">
+						                    <a href="{{ path("app_panier_ajouter", {id: smartphone.id, qte: 1}) }}" class="btn btn-primary ajax">
+						                        <i class="fa fa-cart-arrow-down"></i>
+						                        Ajouter au panier
+						                    </a>
+						                    </div> #}
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 {% endblock %}

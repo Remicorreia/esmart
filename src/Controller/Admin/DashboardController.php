@@ -2,6 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Capacite;
+use App\Entity\Commande;
+use App\Entity\Detail;
 use App\Entity\Smartphone;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -45,5 +48,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('User', 'fa-solid fa-user', User::class);
         yield MenuItem::linkToCrud('Smartphone', 'fa-solid fa-mobile', Smartphone ::class);
+        yield MenuItem::linkToCrud('Capacite', 'fa-solid fa-user', Capacite::class);
+        yield MenuItem::linkToCrud('Commande', 'fa-solid fa-user', Commande::class);
+        yield MenuItem::linkToCrud('Detail', 'fa-solid fa-user', Detail::class);
     }
 }

@@ -93,7 +93,6 @@ public function valider(Session $session, SmartphoneRepository $smartphoneReposi
     if ($panier) {
         $cmd = new Commande;
         $cmd->setDateEnregistrement(new DateTime());
-        $cmd->setEtat("en Attente");
         $cmd->setUser($this->getUser()); // affecte l'utilisateur connecté a la propriété 'client' de l'objet $cmd
         $montant = 0;
         foreach ($panier as $ligne) {

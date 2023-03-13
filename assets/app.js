@@ -19,7 +19,7 @@ $(() => {
 
     // Lorsqu'un lien avec la classe "ajax" est cliqué
     $("a.ajax").on("click", (evtClick) => {
-  
+      
       // Empêcher le comportement par défaut du lien (redirection vers une autre page)
       evtClick.preventDefault();
   
@@ -37,7 +37,7 @@ $(() => {
           $("#nombre").html(data);
   
           // Afficher les données récupérées dans la console
-          console.log(data);
+          alert(data);
         },
         error: (jqXHR, status, error) => {
   

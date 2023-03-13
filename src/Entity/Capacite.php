@@ -11,42 +11,27 @@ class Capacite
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?string $id = null;
 
-    #[ORM\Column]
-    private ?int $valeur = null;
-
-    #[ORM\Column(length: 10)]
-    private ?string $unite = null;
+    #[ORM\Column(length: 255)]
+    private ?string $valeur = null;
 
     #[ORM\ManyToOne(inversedBy: 'capacite')]
     private ?Smartphone $smartphone = null;
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
 
-    public function getValeur(): ?int
+    public function getValeur(): ?string
     {
         return $this->valeur;
     }
 
-    public function setValeur(int $valeur): self
+    public function setValeur(string $valeur): self
     {
         $this->valeur = $valeur;
-
-        return $this;
-    }
-
-    public function getUnite(): ?string
-    {
-        return $this->unite;
-    }
-
-    public function setUnite(string $unite): self
-    {
-        $this->unite = $unite;
 
         return $this;
     }

@@ -5,86 +5,88 @@
 
 {% block body %}
 
-	<table class="table ">
-		<thead class="thead-dark">
-			<tr>
-				<th colspan="3">Détail du panier</th>
-			</tr>
-			<tr>
-				<th>Titre</th>
-				<th>Produit</th>
-				<th>Tailles</th>
-				<th>Prix</th>
-				<th>Qté</th>
-				<th>Total</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% set total = 0 %}
-			{% for ligne in panier %}
-				<tr>
-					<td>{{ ligne.produit.titre }}</td>
-					<td>
-						<img class="card-img-panier" src="{{ asset(image_path ~ ligne.produit.photo )}}" alt="{{ ligne.produit.titre }}">
-					</td>
-					<td>
-						{% for taille in ligne.produit.taille %}
-							<td>{{ taille.size}}</td>
-						{% endfor %}
-					</td>
-					<td>
-						<span>{{ ligne.produit.prix }}</span>€</td>
-					{# <td>{{ ligne.produit.taille.size }}</td> #}
+	<div class="custom-sontainer">
 
-					<td>
-						<div class="d-inline-flex  justify-content-between">
-							<button class="btn btn-primary btnPlusMoins" id="plus-{{ligne.produit.id}}" idsecret="{{ path("app_panier_ajouter_card", {id: ligne.produit.id}) }}" ,name="qte" type="number" min="0" max="{{ ligne.produit.stock }}">+</button>
-							<div class="quantite">{{ ligne.quantite }}
+		<table class="table ">
+			<thead class="thead-dark">
+				<tr>
+					<th colspan="3">Détail du panier</th>
+				</tr>
+				<tr>
+					<th>Titre</th>
+					<th>Smartphone</th>
+					<th>Tailles</th>
+					<th>Prix</th>
+					<th>Qté</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% set total = 0 %}
+				{% for ligne in panier %}
+					<tr>
+						<td>{{ ligne.smartphone.nom }}</td>
+						<td>
+							<img class="card-img-panier" src="{{ asset(image_path ~ ligne.smartphone.photo )}}" alt="{{ ligne.smartphone.nom }}">
+						</td>
+						<td>
+							{% for taille in ligne.smartphone.nom %}
+								<td>{{ taille.size}}</td>
+							{% endfor %}
+						</td>
+						<td>
+							<span>{{ ligne.smartphone.prix }}</span>€</td>
+						{# <td>{{ ligne.smartphone.taille.size }}</td> #}
+
+						<td>
+							<div class="d-inline-flex  justify-content-between">
+								<button class="btn btn-primary btnPlusMoins" id="plus-{{ligne.smartphone.id}}" idsecret="{{ path("app_panier_ajouter_card", {id: ligne.smartphone.id}) }}" ,name="qte" type="number" min="0" max="{{ ligne.smartphone.stock }}">+</button>
+								<div class="quantite">{{ ligne.quantite }}
+								</div>
+								<button class="btn btn-danger btnPlusMoins" id="moins-{{ligne.smartphone.id}}" idsecret="{{ path("app_panier_ajouter_card", {id: ligne.smartphone.id}) }}" ,name="qte" type="number" min="0" max="{{ ligne.smartphone.stock }}">-</button>
 							</div>
-							<button class="btn btn-danger btnPlusMoins" id="moins-{{ligne.produit.id}}" idsecret="{{ path("app_panier_ajouter_card", {id: ligne.produit.id}) }}" ,name="qte" type="number" min="0" max="{{ ligne.produit.stock }}">-</button>
-						</div>
 
-					</td>
-					{# <a href="{{ path('app_produit_show') }}" class="btn btn"> #}
+						</td>
+						{# <a href="{{ path('app_smartphone_show') }}" class="btn btn"> #}
 
-					<td>
-						<span class='prix'>{{ ligne.quantite * ligne.produit.prix }}€</span>
-						<a href="{{ path("app_panier_supprimer", {id: ligne.produit.id}) }}" title="Supprimer un article" onclick="return confirm('Confirmer la suppression ?')">
-							<i class="fa fa-times text-danger"></i>
-						</a>
-					</td>
-				</tr>
-				{% set total = total + ligne.quantite * ligne.produit.prix %}
+						<td>
+							<span class='prix'>{{ ligne.quantite * ligne.smartphone.prix }}€</span>
+							<a href="{{ path("app_panier_supprimer", {id: ligne.smartphone.id}) }}" title="Supprimer un article" onclick="return confirm('Confirmer la suppression ?')">
+								<i class="fa fa-times text-danger"></i>
+							</a>
+						</td>
+					</tr>
+					{% set total = total + ligne.quantite * ligne.smartphone.prix %}
 
-			{% else %}
+				{% else %}
+					<tr>
+						<td colspan="4">Le panier est vide... pour l'instant</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+
+			<tfoot class="thead-dark">
 				<tr>
-					<td colspan="4">Le panier est vide... pour l'instant</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-
-		<tfoot class="thead-dark">
-			<tr>
-				<th colspan="3">Total</th>
-				<td id="prixtotal">
-					<span>{{ total }}</span>
-					€
-					{% if panier|length %}
-						<a href="{{ path('app_panier_valider') }}" class="btn btn-success float-right">
-							<i class="fa fa-cash-register"></i>
+					<th colspan="3">Total</th>
+					<td id="prixtotal">
+						<span>{{ total }}</span>
+						€
+						{% if panier|length %}
+							<a href="{{ path('app_panier_valider') }}" class="btn btn-success float-right">
+								<i class="fa fa-cash-register"></i>
+							</a>
+						{% endif %}
+					</td>
+					<th>
+						<a href="{{ path('app_panier_vider') }}" title="Vider le panier">
+							<i class="fa fa-trash"></i>
 						</a>
-					{% endif %}
-						<th>
-					<a href="{{ path('app_panier_vider') }}" title="Vider le panier">
-						<i class="fa fa-trash"></i>
-					</a>
-				</th>
-				</td>
-			</tr>
-		</tfoot>
-	</table>
-	<script>
-		window.addEventListener("load", () => {
+					</th>
+				</tr>
+			</tfoot>
+		</td>
+	</tr>
+</tfoot></table></div><script>window.addEventListener("load", () => {
 
 $(".btnPlusMoins").click(function (event) { /* indique à l'agent utilisateur que si l'événement n'est pas explicitement géré,
              son action par défaut ne doit pas être effectuée comme elle le serait normalement*/
@@ -134,6 +136,4 @@ console.log("ERREUR AJAX", status, error);
 });
 });
 
-});
-	</script>
-{% endblock %}
+});</script>{% endblock %}

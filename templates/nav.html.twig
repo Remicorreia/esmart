@@ -1,109 +1,81 @@
 <div class="flounav"></div>
 
 <nav>
-<div class="contnav">
-        <div class="parnav">
-                <a class="a-logo" href="{{ path('app_home') }}" class="homebt1">
-                    <div class="cennav">
-                        <img class="logo2" src='{{ asset("images/logo-esmart2.png")}}' alt="">
-                    </div>
-                </a>
+	<div class="contnav">
+		<div class="parnav">
+			<a class="a-logo" href="{{ path('app_home') }}" class="homebt1">
+				<div class="cennav">
+					<img class="logo2" src='{{ asset("images/logo-esmart2.png")}}' alt="">
+				</div>
+			</a>
+			<div class="etirnav">
+				<div class="cennav">
+					<div class="search">
+						<form>
+							<input class="reche1" type="search" name="q" placeholder="Recherche" autocomplete="off">
+						</form>
+					</div>
+				</div>
+				<div class="redi">
+					<ul class="rediul">
+						<li class="redili">
+							<a href="" class="redia">A Propos</a>
+						</li>
+						<li class="redili">
+							<a href="" class="redia">Nous contacter</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cennav">
+					<div class="nav3">
+						<ul class="ul2">
+							<a href="{{ path('app_panier') }}">
+								<li class="bordrond" title="Panier">
+									<div class="contpan" id="nombre"></div>
+								</li>
+							</a>
+							<div class="parcompte">
+								<li class="bordrond">
+									<div><img class="imguser" src="{{ asset("images/icons8-utilisateur-30.png") }}" alt=''>
+									</div>
+									<div class="inscon">
+										{% if app.user %}
+											<div class="nomnav">
 
-            {# <div class="navig">
-                <ul class="navig2">
-            <li class="li1"><a class="a-nav" href="{{ path('app_smartphone_index') }}"class="homebt2">SmartPhones</a>
-            </li>
-                <div class="parmarque">
-                    <li class="li1"><a class="a-marque" href=""class="homebt2">Marques</a>
-                    </li>
-                    <ul class="ulmarque">
-                            <li class="limarque"><a class="a-nav" href="amarque">Samsung</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Apple</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Huawei</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Xiaomi</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Honor</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Oppo</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Sony</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Google</a></li>
-                            <li class="limarque"><a class="a-nav" href="{{ path('app_smartphone_index') }}">OnePlus</a></li>
-                            <li class="limarque"><a class="a-nav" href="amarque">Autres</a></li>
-                        </ul>
-                </div>
-                <li class="li1"><a class="a-nav" href="{{ path('app_smartphone_index') }}"class="homebt2">Nouveautées</a>
-                </li>
-                    <li class="li1"><a class="a-nav" href="{{ path('app_smartphone_index') }}"class="homebt2">Meilleurs Ventes</a>
-                    </li>
-                </ul>
-            </div> #}
-            <div class="etirnav">
-                <div class="cennav">
-                    <div class="search">
-                        <form>
-                            <input class="reche1" type="search" name="q" placeholder="Recherche" autocomplete="off">
-                        </form>
-                    </div>
-                </div>
-                <div class="redi">
-                    <ul class="rediul">
-                        <li class="redili"><a href="" class="redia">A Propos</a></li>
-                        <li class="redili"><a href="" class="redia">Nous contacter</a></li>
-                    </ul>
-                </div>
-                <div class="cennav">
-                    <div class="nav3">
-                        <ul class="ul2">
-                        <li class="bordrond" title="Panier">
-                            <div class="contpan" id="nombre"></div>
-                        </li>
-                        <div class="parcompte">
-                            <li class="bordrond">
-                                <div><img class="imguser" src="{{ asset("images/icons8-utilisateur-30.png") }}" alt=''>
-                                </div>
-                                <div class="inscon">
-                                {% if app.user %}
-                                    <div class="nomnav">
+												<div class="div-conn">
 
-                                <div class="div-conn">
+													{{app.user.nom}}
+													{{app.user.prenom}}
 
-                                {{app.user.nom}}
-                                {{app.user.prenom}}
+													<hr class="hrnom">
 
-                                <hr class="hrnom">
+												</div>
+												<a href="{{ path('app_user_edit', {'id': app.user.id}) }}" class="a-conn">Profil</a>
+											</div>
 
-                                </div>
-                            <a href="{{ path('app_user_edit', {'id': app.user.id}) }}" class="a-conn">Profil</a>
-                        </div>
-                        
-                                <div class="div-conn">
-                            <a href="{{ path('app_logout') }}" class="a-conn">Déconnexion</a>
-                        </div>
+											<div class="div-conn">
+												<a href="{{ path('app_logout') }}" class="a-conn">Déconnexion</a>
+											</div>
 
-                        <style>
-                            .inscon{
-                                min-height: 100px;
-                                margin-top: 100px,
-                                }
-                        </style>
+										{% else %}
 
-                                {% else %}
+											<div class="div-conn">
+												<a href="{{ path('app_login') }}" class="a-conn">Connexion</a>
+											</div>
 
-                                <div class="div-conn">
-                                    <a href="{{ path('app_login') }}" class="a-conn">Connexion</a>
-                                </div>
-                                
-                                <div class="div-ins">
-                                    <a href="{{ path('app_register') }}" class="a-conn">S'enregistrer</a>
-                                </div>
-                                
-                                {% endif %}
+											<div class="div-ins">
+												<a href="{{ path('app_register') }}" class="a-conn">S'enregistrer</a>
+											</div>
 
-                                </div>
-                            </li>
-                        </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+										{% endif %}
+
+									</div>
+								</li>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>

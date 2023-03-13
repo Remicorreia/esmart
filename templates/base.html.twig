@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="{{ (asset('images/logo-esmart1.png')) }}">
-        
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link
+		rel="icon" href="{{ (asset('images/logo-esmart1.png')) }}">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    
-    <body>
-        
-            {% block nav %}
-                {{ include("nav.html.twig") }}
-            {% endblock %}
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
 
-        {% block body %}{% endblock %}
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
 
-            {% block footer %}
-                {{ include("footer.html.twig") }}
-            {% endblock %}
-    </body>
+	<body>
+
+		{% block nav %}
+			{{ include("nav.html.twig") }}
+		{% endblock %}
+		{{ include("messages.html.twig") }}
+		{% block body %}{% endblock %}
+
+		{% block footer %}
+			{{ include("footer.html.twig") }}
+		{% endblock %}
+	</body>
 </html>
