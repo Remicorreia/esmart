@@ -29,9 +29,9 @@ class SmartphoneCrudController extends AbstractCrudController
             TextField::new('nom'),
             TextField::new('description'),
             AssociationField::new('capacite'),
-            NumberField::new('autonomie'),
-            NumberField::new('annee'),
-            NumberField::new('pouces'),
+            TextField::new('autonomie'),
+            TextField::new('annee'),
+            TextField::new('pouces'),
             NumberField::new('prix'),
 
             

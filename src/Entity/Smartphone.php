@@ -31,13 +31,21 @@ class Smartphone
     #[ORM\OneToMany(mappedBy: 'smartphone', targetEntity: Detail::class)]
     private Collection $details;
 
-    #[ORM\OneToMany(mappedBy: 'smartphone', targetEntity: Capacite::class)]
-    private Collection $capacite;
+    #[ORM\Column(length: 255)]
+    private ?string $pouces = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $annee = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $autonomie = null;
+
+    #[ORM\ManyToOne(inversedBy: 'smartphones')]
+    private ?Capacite $capacite = null;
 
     public function __construct()
     {
-        $this->details = new ArrayCollection();
-        $this->capacite = new ArrayCollection();
+        $this->details = new ArrayCollection();     
     }
 
     public function getId(): ?int
@@ -123,32 +131,50 @@ class Smartphone
         return $this;
     }
 
-    /**
-     * @return Collection<int, Capacite>
-     */
-    public function getCapacite(): Collection
+    public function getPouces(): ?string
     {
-        return $this->capacite;
+        return $this->pouces;
     }
 
-    public function addCapacite(Capacite $capacite): self
+    public function setPouces(string $pouces): self
     {
-        if (!$this->capacite->contains($capacite)) {
-            $this->capacite->add($capacite);
-            $capacite->setSmartphone($this);
-        }
+        $this->pouces = $pouces;
 
         return $this;
     }
 
-    public function removeCapacite(Capacite $capacite): self
+    public function getAnnee(): ?string
     {
-        if ($this->capacite->removeElement($capacite)) {
-            // set the owning side to null (unless already changed)
-            if ($capacite->getSmartphone() === $this) {
-                $capacite->setSmartphone(null);
-            }
-        }
+        return $this->annee;
+    }
+
+    public function setAnnee(string $annee): self
+    {
+        $this->annee = $annee;
+
+        return $this;
+    }
+
+    public function getAutonomie(): ?string
+    {
+        return $this->autonomie;
+    }
+
+    public function setAutonomie(string $autonomie): self
+    {
+        $this->autonomie = $autonomie;
+
+        return $this;
+    }
+
+    public function getCapacite(): ?Capacite
+    {
+        return $this->capacite;
+    }
+
+    public function setCapacite(?Capacite $capacite): self
+    {
+        $this->capacite = $capacite;
 
         return $this;
     }

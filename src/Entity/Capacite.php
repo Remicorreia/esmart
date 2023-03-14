@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CapaciteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CapaciteRepository::class)]
@@ -11,13 +13,29 @@ class Capacite
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?string $id = null;
+    private ?int $id = null;
 
     #[ORM\Column(length: 255)]
     private ?string $valeur = null;
 
-    #[ORM\ManyToOne(inversedBy: 'capacite')]
-    private ?Smartphone $smartphone = null;
+    #[ORM\OneToMany(mappedBy: 'capacite', targetEntity: Smartphone::class)]
+    private Collection $smartphones;
+
+
+    /**
+     * Convertir l'objet en chaîne de caractères.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->valeur;
+    }
+
+    public function __construct()
+    {
+        $this->smartphones = new ArrayCollection();
+    }
 
     public function getId(): ?string
     {
@@ -36,15 +54,34 @@ class Capacite
         return $this;
     }
 
-    public function getSmartphone(): ?Smartphone
+    /**
+     * @return Collection<int, Smartphone>
+     */
+    public function getSmartphones(): Collection
     {
-        return $this->smartphone;
+        return $this->smartphones;
     }
 
-    public function setSmartphone(?Smartphone $smartphone): self
+    public function addSmartphone(Smartphone $smartphone): self
     {
-        $this->smartphone = $smartphone;
+        if (!$this->smartphones->contains($smartphone)) {
+            $this->smartphones->add($smartphone);
+            $smartphone->setCapacite($this);
+        }
 
         return $this;
     }
+
+    public function removeSmartphone(Smartphone $smartphone): self
+    {
+        if ($this->smartphones->removeElement($smartphone)) {
+            // set the owning side to null (unless already changed)
+            if ($smartphone->getCapacite() === $this) {
+                $smartphone->setCapacite(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

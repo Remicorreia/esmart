@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20230313131657 extends AbstractMigration
+final class Version20230314095417 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -22,8 +22,8 @@ final class Version20230313131657 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE capacite DROP FOREIGN KEY FK_A1E9ED3B2E4F4908');
         $this->addSql('DROP INDEX IDX_A1E9ED3B2E4F4908 ON capacite');
-        $this->addSql('ALTER TABLE capacite DROP smartphone_id');
-        $this->addSql('ALTER TABLE smartphone ADD capacite_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE capacite DROP smartphone_id, CHANGE id id INT AUTO_INCREMENT NOT NULL');
+        $this->addSql('ALTER TABLE smartphone ADD capacite_id INT DEFAULT NULL, ADD pouces VARCHAR(255) NOT NULL, ADD annee VARCHAR(255) NOT NULL, ADD autonomie VARCHAR(255) NOT NULL');
         $this->addSql('ALTER TABLE smartphone ADD CONSTRAINT FK_26B07E2E7C79189D FOREIGN KEY (capacite_id) REFERENCES capacite (id)');
         $this->addSql('CREATE INDEX IDX_26B07E2E7C79189D ON smartphone (capacite_id)');
     }
@@ -31,11 +31,11 @@ final class Version20230313131657 extends AbstractMigration
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE capacite ADD smartphone_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE capacite ADD smartphone_id INT DEFAULT NULL, CHANGE id id VARCHAR(255) NOT NULL');
         $this->addSql('ALTER TABLE capacite ADD CONSTRAINT FK_A1E9ED3B2E4F4908 FOREIGN KEY (smartphone_id) REFERENCES smartphone (id)');
         $this->addSql('CREATE INDEX IDX_A1E9ED3B2E4F4908 ON capacite (smartphone_id)');
         $this->addSql('ALTER TABLE smartphone DROP FOREIGN KEY FK_26B07E2E7C79189D');
         $this->addSql('DROP INDEX IDX_26B07E2E7C79189D ON smartphone');
-        $this->addSql('ALTER TABLE smartphone DROP capacite_id');
+        $this->addSql('ALTER TABLE smartphone DROP capacite_id, DROP pouces, DROP annee, DROP autonomie');
     }
 }
