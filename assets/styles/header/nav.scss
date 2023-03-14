@@ -1,11 +1,4 @@
 
-input[type=search]::-ms-clear {
-  display: none; width : 0; height: 0;
-  }
-input[type=search]::-ms-reveal {
-  display: none; width : 0; height: 0;
-  }
-
 nav {
   background: linear-gradient(rgb(43, 43, 43),rgba(43, 43, 43, 0))  !important;
   width: 100%;
@@ -40,7 +33,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 50px;
+  margin: 0px;
 }
 
 .rediul{
@@ -151,9 +144,9 @@ a:hover {
 }
 
 .search {
-  border-radius: 25px !important;
   padding: 3px 6px !important;
   outline: unset !important;
+  border-bottom: 2px solid white;
 }
 
 .reche1 {
@@ -164,7 +157,6 @@ a:hover {
   border-color: unset !important;
   border-style: unset !important;
   outline: unset !important;
-  border-bottom: 2px solid white !important;
 }
 
 .nav3 {
@@ -184,6 +176,25 @@ a:hover {
   border: white solid 2px;
   border-radius: 100px;
   flex-direction: column;
+}
+
+.bordrond2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  border: white solid 2px;
+  border-radius: 100px;
+  flex-direction: column;
+  margin: 0 5px;
+  transition: transfrom(0.5s);
+}
+
+.bordrond2:hover{
+  scale: (1.1);
 }
 
 .parulmarque{
@@ -318,4 +329,84 @@ li.li1:nth-of-type(2) {
 .hrnom{
   color: white;
   margin: 0px;
+}
+
+.navres{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgres-1{
+  width: auto;
+  height: 20px;
+}
+
+.imgres-2{
+  width: auto;
+  height: 20px;
+}
+
+.resimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imgres-2{
+  width: auto;
+  height: 20px;
+}
+
+.navul{
+  position: relative;
+  font-size: 14px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.linav{
+  margin-top: 5px;
+}
+
+.divplus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.flechp{
+  font-size: 17px;
+}
+
+.roulant{
+  position: absolute;
+  top: 40px;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0px;
+}
+
+.plusdown{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pplus{
+  margin: 0px;
+}
+
+.pplus :nth-of-type(2){
+  margin-right: 3px;
 }

@@ -1,48 +1,65 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}eSmart | smartphone{% endblock %}
+{% block title %}eSmart | smartphone
+{% endblock %}
 
 
 {% block body %}
 
-<div class="custom-container">
+	<div class="custom-container">
 
 
-<div class="parchem"><div class="chemintop"><a class="achem" href="{{ path('app_home') }}">eSmart</a><p class="pchem">></p><a class="achem" href="">Smartphone</a></div></div>
+		<div class="parchem">
+			<div class="chemintop">
+				<a class="achem" href="{{ path('app_home') }}">eSmart</a>
+				<p class="pchem">></p>
+				<a class="achem" href="">Smartphone</a>
+			</div>
+		</div>
 
 
-    <div class="contfiltsmar">
+		<div class="contfiltsmar">
 
-<div class="filterdiv"></div>
+			<div class="filterdiv">
 
-    <div class="parparsmart">
-            <div class="par-smar">
-                
-                        {% for smartphone in smartphones %}
+				<div class="search">
+					<form class="formurech">
+						<input class="reche1" type="search" name="q" placeholder="Recherche" autocomplete="off">
+						<button class="rechbou" type="submit">
+							<div class="parloop"><img class="rechloop" src="{{ asset('images/icons8-chercher-50.png') }}" alt=""></div>
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="parparsmart">
+				<div class="par-smar">
+
+					{% for smartphone in smartphones %}
 
 
-                    <div class="d-carte">
-                            <div class="carte-tablemin">
+						<div class="d-carte">
+							<div class="carte-tablemin">
 
-                                <a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}" class="showimg">
-                                    <div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
-                                    </div>
-                                </a>
-                                    
-                                <div class="papacartemin">
-                                    <div class="paradcartemin">
-                                        <div class="avh2">
-                                            <h2 class="h2smartmin">{{ smartphone.nom }}</h2>
-                                            <h2 class="slosmarmin">{{ smartphone.description }}</h2>
-                                            <div class="prixmin">{{ smartphone.prix }}€</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                        {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+								<a href="{{ path('app_smartphone_show', {'id': smartphone.id}) }}" class="showimg">
+									<div class="contimgsmartphonesmin"><img class="imgsmartphonesmin" src="{{ asset( 'images/' ~ smartphone.photo ) }}" alt="">
+									</div>
+								</a>
+
+								<div class="papacartemin">
+									<div class="paradcartemin">
+										<div class="avh2">
+											<h2 class="h2smartmin">{{ smartphone.nom }}</h2>
+											<h2 class="slosmarmin">{{ smartphone.description }}</h2>
+											<div class="prixmin">{{ smartphone.prix }}€</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
