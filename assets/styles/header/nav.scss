@@ -19,6 +19,7 @@ nav {
 
 .a-logo{
   height: min-content;
+  z-index: 90;
 }
 
 .parnav {
@@ -332,6 +333,7 @@ li.li1:nth-of-type(2) {
 }
 
 .navres{
+  z-index: 93;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,6 +362,7 @@ li.li1:nth-of-type(2) {
 }
 
 .navul{
+  z-index: 91;
   position: relative;
   font-size: 14px;
   list-style: none;
@@ -394,6 +397,7 @@ li.li1:nth-of-type(2) {
   text-align: center;
   vertical-align: middle;
   margin: 0px;
+  display: none;
 }
 
 .plusdown{
@@ -404,9 +408,25 @@ li.li1:nth-of-type(2) {
 }
 
 .pplus{
+  z-index: 92;
   margin: 0px;
 }
 
-.pplus :nth-of-type(2){
+.pplus :nth-of-type(1){
   margin-right: 3px;
+}
+
+.fondflou{
+  position: relative;
+  z-index: 89;
+  top: -160px;
+  background: rgba(0, 0, 0, 0.623);
+  backdrop-filter: blr(10px);
+  width: 200em;
+  height: 100em;
+  display: none;
+}
+
+.plusdown:hover .roulant{
+  display: inline;
 }
