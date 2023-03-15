@@ -47,8 +47,8 @@ $(() => {
       });
     });
   
-    // Lorsqu'un formulaire avec l'ID "formSearch" est soumis
-    $("#formSearch").on("submit", (evtSubmit) => {
+    // Lorsqu'un formulaire avec l'ID "formRecherche" est soumis
+    $("#formRecherche").on("submit", (evtSubmit) => {
   
       // Empêcher le comportement par défaut du formulaire (rechargement de la page)
       evtSubmit.preventDefault();
@@ -56,7 +56,7 @@ $(() => {
       // Envoyer une requête AJAX pour récupérer du HTML à partir de l'URL du formulaire avec les données du champ de recherche
       $.ajax({
         url: evtSubmit.target.getAttribute("action"),
-        data: "search=" + $("#formSearch #search").val(),
+        data: "search=" + $("#formRecherche #search").val(),
         dataType: "html",
         success: (data) => {
   

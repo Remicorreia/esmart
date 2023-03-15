@@ -22,13 +22,16 @@
 
 			<div class="filterdiv">
 
-				<div class="search">
-					<form class="formurech">
-						<input class="reche1" type="search" name="q" placeholder="Recherche" autocomplete="off">
-						<button class="rechbou" type="submit">
-							<div class="parloop"><img class="rechloop" src="{{ asset('images/icons8-chercher-50.png') }}" alt=""></div>
-						</button>
-					</form>
+				<div class="contsearch">
+					<div class="search1">
+						<form class="formurech" id="formRecherche" action="{{ path('app_recherche_ajax') }}">
+							<input class="reche1" type="text" name="search" placeholder="Recherche" autocomplete="off">
+							<button class="rechbou" type="submit">
+								<div class="parloop"><img class="rechloop" src="{{ asset('images/icons8-chercher-50.png') }}" alt="">
+								</div>
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
 

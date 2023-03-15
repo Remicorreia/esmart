@@ -144,22 +144,6 @@ a:hover {
   justify-content: center;
 }
 
-.search {
-  padding: 3px 6px !important;
-  outline: unset !important;
-  border-bottom: 2px solid white;
-}
-
-.reche1 {
-  caret-color: white;
-  background-color: rgba(0, 0, 0, 0) !important;
-  color: white !important;
-  box-sizing: unset !important;
-  border-color: unset !important;
-  border-style: unset !important;
-  outline: unset !important;
-}
-
 .nav3 {
   justify-content: center;
   align-items: center;
@@ -191,7 +175,11 @@ a:hover {
   border-radius: 100px;
   flex-direction: column;
   margin: 0 5px;
-  transition: transfrom(0.5s);
+  transition: transfrom(1.5s);
+}
+
+.bordrond2:nth-of-type(3){
+  margin-right: 0px;
 }
 
 .bordrond2:hover{
@@ -427,6 +415,7 @@ li.li1:nth-of-type(2) {
   display: none;
 }
 
-.plusdown:hover .roulant{
+.plusdown:hover .roulant,
+.plusdown:hover .fondflou {
   display: inline;
 }

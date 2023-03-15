@@ -39,6 +39,23 @@ class SmartphoneRepository extends ServiceEntityRepository
         }
     }
 
+        /**
+    * @return Produit[] Returns an array of Produit objects
+        SELECT s.*
+        FROM smartphone s
+        WHERE s.nom LIKE '%les%'
+    */
+    public function recherche($value): array
+    {
+       return $this->createQueryBuilder('s')
+           ->where('s.nom LIKE :val')
+           ->setParameter('val', "%$value%")
+           ->orderBy('s.nom', 'ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+    }
+
 //    /**
 //     * @return Smartphone[] Returns an array of Smartphone objects
 //     */
@@ -64,3 +81,4 @@ class SmartphoneRepository extends ServiceEntityRepository
 //        ;
 //    }
 }
+

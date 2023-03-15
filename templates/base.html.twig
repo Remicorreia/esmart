@@ -25,10 +25,10 @@
 			{{ include("nav.html.twig") }}
 		{% endblock %}
 		{{ include("messages.html.twig") }}
-		{% block body %}{% endblock %}
-
-		{% block footer %}
-			{{ include("footer.html.twig") }}
-		{% endblock %}
-	</body>
-</html>
+		<div id="main"> {% block body %}{% endblock %}
+			</div>
+			{% block footer %}
+				{{ include("footer.html.twig") }}
+			{% endblock %}
+		</body>
+	</html>
